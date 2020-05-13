@@ -1,0 +1,129 @@
+.wrap-filter .filter-group:last-child {
+  margin-bottom: 0px;
+}
+
+.filter-group {
+  width: 100%;
+  height: auto;
+  margin-bottom: 25px;
+}
+
+.filter-title-group {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 11px;
+  opacity: .6;
+  color: #668291;
+  margin-bottom: 5px;
+}
+
+.filter-group .filter-row:last-child {
+  border-bottom: none;
+}
+
+.filter-row {
+  width: 100%;
+  padding: 10px 0px;
+  display: flex;
+  border-bottom: 1px solid rgba(214,223,226,.6);
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter-row:hover .filter-name {
+  color: initial;
+}
+
+.filter-check-name {
+  width: calc(100% - 80px);
+  display: flex;
+  align-items: center;
+}
+
+.filter-check {
+  width: 30px;
+  height: auto;
+}
+
+.filter-name {
+  width: calc(100% - 30px);
+  height: auto;
+  color: #668291;
+  font-weight: 300;
+  font-size: 13px;
+  /*white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;*/
+}
+
+.filter-quantity {
+  width: 80px;
+  text-align: right;
+}
+
+.filter-quantity span {
+  background: rgba(214,223,226,.6);
+  color: #99a8ad;
+  padding: 4px 6px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.filter-row.active-type {
+  background: rgba(214,223,226,.6)
+}
+
+.filter-row.active .filter-name {
+  font-weight: 700;
+}
+
+.filter-row.active:hover .filter-name {
+  color: #668291;
+}
+
+.filter-row.active .filter-quantity span {
+  background: #37c41a;
+  color: #fff;
+}
+
+.filter-date {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.filter-date input {
+  width: calc(100% - 40px);
+  height: 34px;
+  border: 1px solid rgba(214,223,226,1);
+  text-indent: 5px;
+  color: #668291;
+}
+
+.filter-date span {
+  color: #668291;
+  font-size: 13px;
+  width: 30px;
+  display: inline-block;
+}
+
+.filter-row .filter-date-btn {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.filter-row .filter-date-btn .btn-date {
+  font-size: 11px!important;
+  padding: 2px 8px 2px 2px!important;
+  height: 20px;
+  align-self: flex-end;
+}
+
+.filter-row .filter-date-btn .btn-date i {
+  font-size: 14px;
+  margin-right: 3px;
+  margin-left: 3px;
+}

@@ -1,0 +1,93 @@
+<div *ngIf="!withtemplate"
+     class="flex flex-center flex-justify-center flex-wrap margin-bottom-40px">
+  <input class="input-file"
+         type="file"
+         *ngIf="!readonly"
+         (change)="handleFileInput($event.target.files)">
+  <div class="btn-group">
+    <a class="btn btn-primary"
+       *ngIf="fileToUpload && !errorSizeFile && !uploadingFile"
+       (click)="onUploadFile()">
+      <i class="material-icons">file_upload</i>
+      <span>Cargar archivo</span>
+    </a>
+    <a class="btn-loading"
+       *ngIf="uploadingFile">
+      <i class="material-icons spin">loop</i>
+      <span>Subiendo...</span>
+    </a>
+    <a class="btn btn-danger"
+       *ngIf="false">
+      <i class="material-icons">close</i>
+    </a>
+  </div>
+  <div class="form-error"
+       *ngIf="errorSizeFile">
+    <i class="material-icons">error</i>
+    <p>Supera los 2 MB permitidos</p>
+  </div>
+  <p class="text-gray text-12px"
+     *ngIf="!errorSizeFile && !fileToUpload">
+    * Máximo permitido: 10 MB
+  </p>
+</div>
+
+<div *ngFor="let item of documents; let i = index"
+     class="row middle-xs">
+  <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
+    <i class="material-icons icon"
+       [ngClass]="{
+          'active': item.loaded
+         }">description</i>
+  </div>
+
+    <div *ngIf="item?.loaded" class="col-xs-12 col-sm-9 col-md-8 col-lg-9">
+      <p class="text-bold text-14px" *ngIf="!withtemplate">{{ item.name }}</p>
+      <p class="text-bold text-14px" *ngIf="withtemplate">{{ item.title }} <span *ngIf="item.required" class="text-rojo">*</span></p>
+      <div class="flex flex-center flex-wrap">
+        <p class="text-11px text-medium margin-right-10px">{{ item.updateDate | date:'medium' }}</p>
+<!--        <p class="margin-right-10px text-gray">//</p>
+        <p class="text-11px text-gray">PDF - 500KB</p>-->
+      </div>
+    </div>
+    <div *ngIf="item?.loaded" class="col-xs-12 col-sm-2 col-md-3 col-lg-2">
+      <div class="btn-group margin-top-10px end-lg end-md end-sm start-xs">
+        <a class="btn btn-xs btn-primary-outline"
+           *ngIf="!readonly && !item?.readOnly"
+           (click)="onDeleteDocument(item, i)">
+          <i class="material-icons">delete</i>
+          <span class="hidden-lg hidden-md hidden-sm">Eliminar</span>
+        </a>
+        <a class="btn btn-xs btn-primary-outline"
+           href="{{ item.path }}"
+           target="_blank">
+          <i class="text-gray material-icons">file_download</i>
+          <span class="hidden-lg hidden-md hidden-sm">Descargar</span>
+        </a>
+      </div>
+    </div>
+
+    <div *ngIf="!item?.loaded" class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+      <p class="text-bold text-14px" *ngIf="!withtemplate">{{ item.name }}</p>
+      <p class="text-bold text-14px" *ngIf="withtemplate">{{ item.title }} <span *ngIf="item.required" class="text-rojo">*</span></p>
+      <div class="flex flex-center flex-wrap">
+        <p class="text-11px text-gray">Aún no se carga un archivo...</p>
+      </div>
+    </div>
+    <div *ngIf="!item?.loaded" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+      <div class="flex flex-center flex-wrap end-lg end-md end-sm start-xs">
+        <input class="input-file"
+               type="file"
+               *ngIf="!readonly && !item?.readOnly"
+               (change)="handleFileInput($event.target.files, item)">
+        <div class="form-error"
+             *ngIf="item.error">
+          <i class="material-icons">error</i>
+          <p>Supera los {{ formatFileSize(sizeFile, 0) }} permitidos</p>
+        </div>
+      </div>
+    </div>
+
+  <div class="divider margin-top-15px margin-bottom-15px"></div>
+</div>
+

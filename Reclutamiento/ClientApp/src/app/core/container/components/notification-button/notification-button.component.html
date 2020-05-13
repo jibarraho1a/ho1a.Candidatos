@@ -1,0 +1,12 @@
+<mat-icon matBadge='3' (click)='onToggle()' matBadgeColor='warn'>notifications</mat-icon>
+
+<div *ngIf='show' class='dropdown notifications'>
+  <ul>
+    <li *ngFor='let item of notificaciones$ | async; last as last'>
+      <span>{{item.titulo}}</span>
+      <p>{{item.contenido}}</p>
+      <div *ngIf="!last" class="divider opacity-60"></div>
+    </li>
+  </ul>
+
+</div>

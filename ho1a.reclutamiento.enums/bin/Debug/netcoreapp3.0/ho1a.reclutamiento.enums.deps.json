@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "ho1a.reclutamiento.enums/1.0.0": {
+        "runtime": {
+          "ho1a.reclutamiento.enums.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ho1a.reclutamiento.enums/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

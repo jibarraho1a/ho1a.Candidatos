@@ -1,0 +1,52 @@
+.wrap-estatus-requisicion .estatus-requision {
+  display: flex;
+  /*align-items: center;*/
+  margin-bottom: 15px;
+  color: #668291;
+}
+
+.wrap-estatus-requisicion .estatus-requision i {
+  margin-right: 15px;
+  font-size: 22px;
+}
+
+.wrap-estatus-requisicion .estatus-requision.estatus-pasado {
+
+}
+
+.wrap-estatus-requisicion .estatus-requision.estatus-actual {
+  color: initial;
+  font-weight: 700;
+  padding: 20px 0px;
+  transition: all .3s;
+  border-top: 1px solid #e6ecee;
+  border-bottom: 1px solid #e6ecee;
+}
+
+.wrap-estatus-requisicion .estatus-requision.estatus-actual i {
+  color: #37c41a;
+}
+
+.wrap-estatus-requisicion .estatus-requision.estatus-futuro {
+
+}
+
+.comentario1 {
+	border-left: 3px solid #d6dfe2;
+	padding-left: 10px;
+	margin-top: 5px;
+	text-align: justify;
+}
+
+.wrap-estatus-requisicion .time-lapse {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  margin-top: 15px;
+  }
+  
+  .wrap-estatus-requisicion .time-lapse i {
+  font-size: 22px;
+  margin-right: 10px;
+  }
+  

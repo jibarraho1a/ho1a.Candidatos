@@ -1,0 +1,115 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reclutamiento", "Reclutamiento\Reclutamiento.csproj", "{08D5D01B-B169-4EE4-B797-0F5F0F7B2471}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Web", "2-Web", "{D9B55575-9C5E-4773-A6D1-DC194B558A3A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0-Shared", "0-Shared", "{2B2AACD5-BD98-46D1-82AE-1E42E51980BC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ho1a.applicationCore", "ho1a.applicationCore\ho1a.applicationCore.csproj", "{7AFAA8FD-D880-4DCB-A632-94826CC705BE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ho1a.reclutamiento.models", "ho1a.reclutamiento.models\ho1a.reclutamiento.models.csproj", "{0EF3643B-11DA-4577-AEBD-2843B7068E6D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ho1a.Api.HttpClient", "ho1a.Api.HttpClient\ho1a.Api.HttpClient.csproj", "{3AEB58A1-8945-41FB-B3DB-259F38697836}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ho1a.reclutamiento.enums", "ho1a.reclutamiento.enums\ho1a.reclutamiento.enums.csproj", "{373A60E0-0697-4E52-AE71-80435F88AF07}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ho1a.reclutamiento.services", "hola.reclutamiento.services\ho1a.reclutamiento.services.csproj", "{0491F39F-7B3C-4267-B70A-9987B55E06DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ho1a.Reclutamiento.BLL", "ho1a.Reclutamiento.BLL\ho1a.Reclutamiento.BLL.csproj", "{199D11E3-F523-4A4E-BAE1-6C0AC590F6D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ho1a.Reclutamiento.DAL", "ho1a.Reclutamiento.DAL\ho1a.Reclutamiento.DAL.csproj", "{1D751175-BEB5-400D-BE29-8BF0EEAA0F0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08D5D01B-B169-4EE4-B797-0F5F0F7B2471}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08D5D01B-B169-4EE4-B797-0F5F0F7B2471}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08D5D01B-B169-4EE4-B797-0F5F0F7B2471}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08D5D01B-B169-4EE4-B797-0F5F0F7B2471}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AFAA8FD-D880-4DCB-A632-94826CC705BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AFAA8FD-D880-4DCB-A632-94826CC705BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AFAA8FD-D880-4DCB-A632-94826CC705BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AFAA8FD-D880-4DCB-A632-94826CC705BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EF3643B-11DA-4577-AEBD-2843B7068E6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EF3643B-11DA-4577-AEBD-2843B7068E6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EF3643B-11DA-4577-AEBD-2843B7068E6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EF3643B-11DA-4577-AEBD-2843B7068E6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AEB58A1-8945-41FB-B3DB-259F38697836}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AEB58A1-8945-41FB-B3DB-259F38697836}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AEB58A1-8945-41FB-B3DB-259F38697836}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AEB58A1-8945-41FB-B3DB-259F38697836}.Release|Any CPU.Build.0 = Release|Any CPU
+		{373A60E0-0697-4E52-AE71-80435F88AF07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{373A60E0-0697-4E52-AE71-80435F88AF07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{373A60E0-0697-4E52-AE71-80435F88AF07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{373A60E0-0697-4E52-AE71-80435F88AF07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0491F39F-7B3C-4267-B70A-9987B55E06DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0491F39F-7B3C-4267-B70A-9987B55E06DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0491F39F-7B3C-4267-B70A-9987B55E06DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0491F39F-7B3C-4267-B70A-9987B55E06DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{199D11E3-F523-4A4E-BAE1-6C0AC590F6D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{199D11E3-F523-4A4E-BAE1-6C0AC590F6D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{199D11E3-F523-4A4E-BAE1-6C0AC590F6D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{199D11E3-F523-4A4E-BAE1-6C0AC590F6D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D751175-BEB5-400D-BE29-8BF0EEAA0F0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D751175-BEB5-400D-BE29-8BF0EEAA0F0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D751175-BEB5-400D-BE29-8BF0EEAA0F0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D751175-BEB5-400D-BE29-8BF0EEAA0F0C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{08D5D01B-B169-4EE4-B797-0F5F0F7B2471} = {D9B55575-9C5E-4773-A6D1-DC194B558A3A}
+		{7AFAA8FD-D880-4DCB-A632-94826CC705BE} = {2B2AACD5-BD98-46D1-82AE-1E42E51980BC}
+		{0EF3643B-11DA-4577-AEBD-2843B7068E6D} = {D9B55575-9C5E-4773-A6D1-DC194B558A3A}
+		{3AEB58A1-8945-41FB-B3DB-259F38697836} = {2B2AACD5-BD98-46D1-82AE-1E42E51980BC}
+		{373A60E0-0697-4E52-AE71-80435F88AF07} = {D9B55575-9C5E-4773-A6D1-DC194B558A3A}
+		{0491F39F-7B3C-4267-B70A-9987B55E06DE} = {D9B55575-9C5E-4773-A6D1-DC194B558A3A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {596E1DEB-427D-4F52-B612-05116AC88F5B}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/ho1ainterno
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Reclutamiento\\Reclutamiento.csproj
+		SccProjectTopLevelParentUniqueName1 = Reclutamiento.sln
+		SccProjectName1 = Reclutamiento
+		SccLocalPath1 = Reclutamiento
+		SccProjectUniqueName2 = ho1a.applicationCore\\ho1a.applicationCore.csproj
+		SccProjectTopLevelParentUniqueName2 = Reclutamiento.sln
+		SccProjectName2 = ho1a.applicationCore
+		SccLocalPath2 = ho1a.applicationCore
+		SccProjectUniqueName3 = ho1a.reclutamiento.models\\ho1a.reclutamiento.models.csproj
+		SccProjectTopLevelParentUniqueName3 = Reclutamiento.sln
+		SccProjectName3 = ho1a.reclutamiento.models
+		SccLocalPath3 = ho1a.reclutamiento.models
+		SccProjectUniqueName4 = ho1a.Api.HttpClient\\ho1a.Api.HttpClient.csproj
+		SccProjectTopLevelParentUniqueName4 = Reclutamiento.sln
+		SccProjectName4 = ho1a.Api.HttpClient
+		SccLocalPath4 = ho1a.Api.HttpClient
+		SccProjectUniqueName5 = ho1a.reclutamiento.enums\\ho1a.reclutamiento.enums.csproj
+		SccProjectTopLevelParentUniqueName5 = Reclutamiento.sln
+		SccProjectName5 = ho1a.reclutamiento.enums
+		SccLocalPath5 = ho1a.reclutamiento.enums
+		SccProjectUniqueName6 = hola.reclutamiento.services\\ho1a.reclutamiento.services.csproj
+		SccProjectTopLevelParentUniqueName6 = Reclutamiento.sln
+		SccProjectName6 = hola.reclutamiento.services
+		SccLocalPath6 = hola.reclutamiento.services
+		SccProjectUniqueName7 = ho1a.Reclutamiento.BLL\\ho1a.Reclutamiento.BLL.csproj
+		SccProjectName7 = ho1a.Reclutamiento.BLL
+		SccLocalPath7 = ho1a.Reclutamiento.BLL
+		SccProjectUniqueName8 = ho1a.Reclutamiento.DAL\\ho1a.Reclutamiento.DAL.csproj
+		SccProjectName8 = ho1a.Reclutamiento.DAL
+		SccLocalPath8 = ho1a.Reclutamiento.DAL
+	EndGlobalSection
+EndGlobal

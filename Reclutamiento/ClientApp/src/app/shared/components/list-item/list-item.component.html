@@ -1,0 +1,49 @@
+<div class="row wrap-requisiciones margin-bottom-20px">
+  <div class="col-xs-12 col-sm-11 col-md-11 col-lg-11">
+    <div class="row">
+      <div *ngFor="let option of columnsDefsVisibles" class="{{ classColumnsForRow }}">
+        <div class="flex flex-center flex-wrap flex-between margin-top-10px margin-bottom-10px">
+            <p class="text-gray">{{ option.title }}</p>
+            <p class="text-bold"
+               [ngStyle]="option.applyStyles? row.styles:''"
+               *ngIf="!isCustomBoolean(option?.type)">
+              {{ format(option?.type, row[option.field]) }}
+            </p>
+            <span
+              *ngIf="isCustomBoolean(option?.type)"
+              [innerHTML]="formatCustomBoolean(option)">
+            </span>
+          </div>
+        <div class="divider"></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
+    <div class="btn-group right margin-top-10px margin-bottom-10px">
+      <a class="btn btn-xs btn-primary-outline"
+         *ngIf="allowEdith"
+         (click)="onEdith()">
+        <i class="material-icons">mode_edit</i>
+      </a>
+      <div class="btn-popover"
+        *ngIf="allowDelete">
+        <ho1a-confirmation
+          [positionLeft]="false"
+          [visible]="toggled"
+          (accept)="onDelete()"
+          (cancel)="onToggled()">
+        </ho1a-confirmation>
+        <a class="btn btn-xs btn-primary-outline"
+           (click)="onToggled()">
+          <i class="material-icons">delete</i>
+        </a>
+      </div>
+      <a class="btn btn-xs btn-primary-outline"
+         [title]="btn.tooltip"
+         *ngFor="let btn of options.columnsDefsButton"
+         (click)="onBtnAction(options.columnDefs, row, btn.key)">
+        <i class="material-icons">{{ btn.icon }}</i>
+      </a>
+    </div>
+  </div>
+</div>

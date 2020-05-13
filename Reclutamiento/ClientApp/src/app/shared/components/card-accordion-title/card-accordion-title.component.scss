@@ -1,0 +1,21 @@
+.accordeon-title-general {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  background: #43495e;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.accordeon-title-general .arrow {
+  transition: all .3s;
+}
+
+.accordeon-title-general .arrow.open {
+  transform: rotate(180deg);
+}

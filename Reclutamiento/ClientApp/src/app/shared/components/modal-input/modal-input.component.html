@@ -1,0 +1,35 @@
+<form [formGroup]="form">
+  <div class="modal"><!-- Cuando el modal aparezca, hay que agregar la clase  .no-scroll  al body o div contenedor de la pagina para desaparecer el scroll-->
+    <div class="modal-box"><!-- Se puede agregar una clase mas al div: .modal-box-lg  o  .modal-box-sm  para hacer mas grande o pequeño el modal-box -->
+      <div class="btn-modal-close"
+           (click)="close()" >
+        <i class="material-icons">close</i>
+      </div>
+      <div class="modal-box-header">
+        <h6>{{ title }}</h6>
+      </div>
+      <div class="modal-box-body">
+        <textarea class="textarea"
+                  rows="5"
+                  formControlName="description">
+        </textarea>
+        <span class="text-rojo" *ngIf="!validForm">Requerido</span>
+      </div>
+      <div class="modal-box-footer">
+        <div class="btn-group right"><!-- Se puede agregar las clases  .left  .center  .right  para alinear los botones -->
+          <a class="btn btn-primary"
+             (click)="onAccept()">
+            <i class="material-icons">check</i>
+            <span>Aceptar</span>
+          </a>
+          <a class="btn btn-primary-outline"
+             (click)="onCancel()">
+            <i class="material-icons">close</i>
+            <span>Cancelar</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="overlay"></div><!-- Esta clase es el fondo negro transparente, la idea es que al hacer clic sobre este div, el modal pueda cerrarse también -->
+  </div>
+</form>

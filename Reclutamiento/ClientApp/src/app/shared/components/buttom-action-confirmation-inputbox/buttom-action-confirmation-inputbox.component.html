@@ -1,0 +1,26 @@
+<ho1a-button-action-confirmation
+  [title]="option.buttonActionConfirmation.title"
+  [typebutton]="option.buttonActionConfirmation.type"
+  [textButton]="option.buttonActionConfirmation.text"
+  [textCancel]="option.buttonActionConfirmation.textCancel"
+  [textAccept]="option.buttonActionConfirmation.textAccept"
+  [positionLeft]="option.buttonActionConfirmation.positionLeft"
+  [visible]="option.buttonActionConfirmation.visible"
+  [disabled]="option.buttonActionConfirmation.disabled"
+  (cancel)="onButtonActionCancel()"
+  (confirm)="onButtonActionConfirm()">
+</ho1a-button-action-confirmation>
+<ho1a-modal-input
+  *ngIf="toggledModalInputCancel"
+  [title]="option.inputBox.title"
+  [required]="option.inputBox.forCancel.required"
+  (cancel)="onToggledModalInputCancel($event)"
+  (accept)="onAccept($event)">
+</ho1a-modal-input>
+<ho1a-modal-input
+  *ngIf="toggledModalInputConfirm"
+  [title]="option.inputBox.title"
+  [required]="option.inputBox.forConfirm.required"
+  (cancel)="onToggledModalInputConfirm($event)"
+  (accept)="onAccept($event)">
+</ho1a-modal-input>

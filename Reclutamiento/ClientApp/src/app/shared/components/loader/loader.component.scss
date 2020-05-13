@@ -1,0 +1,128 @@
+.loader {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: rgba(255,255,255,.8);
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.loader.fullscreen {
+  position: fixed;
+  z-index: 999;
+}
+
+.wrap-loader {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  margin-bottom: 20px;
+  animation-name: word;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.letter1 {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  opacity: 0;
+  animation-name: letter1;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+
+}
+
+.letter2 {
+  position: absolute;
+  left: 28px;
+  bottom: 0px;
+  opacity: 0;
+  animation-name: letter2;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+
+}
+
+.letter3 {
+  position: absolute;
+  left: 54px;
+  bottom: 0px;
+  opacity: 0;
+  animation-name: letter3;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+
+}
+
+.letter4 {
+  position: absolute;
+  left: 76px;
+  bottom: 0px;
+  opacity: 0;
+  animation-name: letter4;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+
+}
+
+.logo-metrocarrier {
+  margin-top: 20px;
+  width: 120px;
+  animation-name: logo-metrocarrier;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes letter1 {
+  0% {left: 200px; opacity: 0;}
+  20% {left: 0px; opacity: 1;}
+  40% {left: 0px; opacity: 1;}
+  60% {left: 0px; opacity: 1;}
+  80% {left: 0px; opacity: 1;}
+  100% {left: 0px; opacity: 1;}
+}
+
+@keyframes letter2 {
+  0% {left: 228px; opacity: 0;}
+  20% {left: 228px; opacity: 0;}
+  40% {left: 28px; opacity: 1;}
+  60% {left: 28px; opacity: 1;}
+  80% {left: 28px; opacity: 1;}
+  100% {left: 28px; opacity: 1;}
+}
+
+@keyframes letter3 {
+  0% {left: 254px; opacity: 0;}
+  20% {left: 254px; opacity: 0;}
+  40% {left: 254px; opacity: 0;}
+  60% {left: 54px; opacity: 1;}
+  80% {left: 54px; opacity: 1;}
+  100% {left: 54px; opacity: 1;}
+}
+
+@keyframes letter4 {
+  0% {left: 276px; opacity: 0;}
+  20% {left: 276px; opacity: 0;}
+  40% {left: 276px; opacity: 0;}
+  60% {left: 276px; opacity: 0;}
+  80% {left: 76px; opacity: 1;}
+  100% {left: 76px; opacity: 1;}
+}
+
+@keyframes word {
+  0% {left: 240px; opacity: 0;}
+  80% {left: 0px; opacity: 1;}
+  100% {left: -20px; opacity: 0;}
+}
+
+@keyframes logo-metrocarrier {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}

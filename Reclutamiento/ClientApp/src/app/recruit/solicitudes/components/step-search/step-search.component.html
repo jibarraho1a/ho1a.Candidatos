@@ -1,0 +1,90 @@
+<!--Body-->
+<div class="box-body" *ngIf="visible()">
+  <div class="flex flex-center flex-wrap flex-between margin-bottom-30px">
+    <h5>{{ currentStep?.description }}</h5>
+    <div class="btn-group right">
+      <form [formGroup]="form">
+        <mat-form-field
+          class="margin-left-5px"
+          *ngIf="getActionByControl('BuscarCandidatosTipoBusqueda').visible">
+          <mat-select placeholder="Tipo de búsqueda"
+                      [disabled]="getConfigurationByControl('tipoBusqueda').configuration.edicion == false || readonly()"
+                      formControlName="tipoBusqueda">
+            <mat-option *ngFor="let item of catalogs?.tiposBusqueda" [value]="item.value">
+              {{ item.text }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </form>
+      <a class="btn btn-primary"
+         *ngIf="getActionByControl('BuscarCandidatoAnterioresRequisiciones').visible"
+         (click)="onToggleModalListCandidate()">
+        <i class="material-icons">search</i>
+        <span class="hidden-xs">{{ getActionByControl('BuscarCandidatoAnterioresRequisiciones').descripcion }}</span>
+      </a>
+      <a class="btn btn-primary"
+         *ngIf="getActionByControl('NuevoCandidatoRequisicion').visible"
+         (click)="onToggleModalNewCandidate()">
+        <i class="material-icons">add</i>
+        <span class="hidden-xs">{{ getActionByControl('NuevoCandidatoRequisicion').descripcion }}</span>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <ho1a-card-accordion
+        *ngFor="let candidate of databackground?.componenteBusqueda; let i = index"
+        [index]="i + 1"
+        [data]="candidate"
+        (clickpopup)="onClickPopup($event, candidate)"
+        class="col-xs-12 col-sm-4 col-md-6 col-lg-4 wrap-busqueda-candidato">
+      <ho1a-accordion-title-candidate
+        card-accordion-tittle
+        [candidate]="candidate">
+      </ho1a-accordion-title-candidate>
+      <ho1a-step-search-candidate-custom
+          card-accordion-body
+          (complementoCV)="onClickPopup($event, candidate)"
+          [ternaIdDisabled]="!getConfigurationByControl('ternaId').configuration.edicion || readonly()"
+          [statusDisabled]="!getConfigurationByControl('status').configuration.edicion || readonly()"
+          [candidate]="candidate"
+          [ternasCandidatos]="catalogs?.ternasCandidatos"
+          [ternas]="catalogs?.ternas">
+      </ho1a-step-search-candidate-custom>
+    </ho1a-card-accordion>
+  </div>
+</div>
+
+<!--Footer-->
+<div class="box-footer flex flex-center flex-wrap flex-between" *ngIf="visible()">
+</div>
+
+<!--Modales-->
+<ho1a-modal-list-candidate
+  [data]="databackground?.candidatosRepositorio"
+  (cancel)="onCancelModalListCandidate()"
+  (accept)="onAcceptModalListCandidate($event)"
+  *ngIf="toggleModalListCandidate">
+</ho1a-modal-list-candidate>
+<ho1a-modal-new-candidate
+  (cancel)="onCancelModalNewCandidate()"
+  (clickButtomAction)="onClickButtomActionModalNewCandidate($event)"
+  *ngIf="toggleModalNewCandidate">
+</ho1a-modal-new-candidate>
+<ho1a-modal-datetime
+  [fechaMinima]="today"
+  (cancel)="onCancelModalDateTime()"
+  (clickButtomAction)="onClickButtomActionModalDateTime($event)"
+  *ngIf="toggleModalDateTime">
+</ho1a-modal-datetime>
+<ho1a-modal-complemento-cv
+  [data]="candidateSelected"
+  (cancel)="onCancelModalComplementoCV()"
+  (clickButtomAction)="onClickButtomActionModalComplementoCV($event)"
+  *ngIf="toggleModalComplementoCV">
+</ho1a-modal-complemento-cv>
+<ho1a-modal-cv
+  [data]="candidateSelected"
+  (cancel)="onCancelModalCV()"
+  (clickButtomAction)="onClickButtomActionModalCV($event)"
+  *ngIf="toggleModalCV">
+</ho1a-modal-cv>

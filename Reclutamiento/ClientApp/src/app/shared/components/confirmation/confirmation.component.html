@@ -1,0 +1,12 @@
+<div class="confirmation"
+     [ngClass]="{'top-left':positionLeft,'top-right':!positionLeft}"
+     [ngStyle]="{'display': visible? 'block' : 'none' }">
+  <i class="material-icons arrow">arrow_drop_down</i>
+  <p class="margin-bottom-10px">{{ title }}</p>
+  <div class="btn-group flex-justify-center">
+    <button class="btn btn-xs btn-success"
+            (click)="onAccept()">{{ textAccept }}</button>
+    <button class="btn btn-xs btn-primary"
+            (click)="onCancel()">{{ textCancel }}</button>
+  </div>
+</div>

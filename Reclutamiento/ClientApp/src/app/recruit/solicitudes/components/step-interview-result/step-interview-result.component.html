@@ -1,0 +1,26 @@
+<!--Footer-->
+<div class="box-body" *ngIf="visible()">
+  <div class="flex flex-center flex-wrap flex-between margin-bottom-30px">
+    <h5>{{ currentStep?.description }}</h5>
+  </div>
+
+  <ho1a-step-interview-result-row
+    *ngFor="let item of databackground?.componenteResultadoEntrevista"
+    [candidate]="item"
+    (clickpopup)="onClickPopup($event, item)">
+  </ho1a-step-interview-result-row>
+
+</div>
+
+<!--Footer-->
+<div class="box-footer flex flex-center flex-wrap flex-between" *ngIf="visible()">
+</div>
+
+<!--Modales-->
+<ho1a-modal-interview-format
+  [readonly]="true"
+  [data]="candidateSelected"
+  (cancel)="onCancelModalInterviewFormat()"
+  (clickButtomAction)="onAcceptModalInterviewFormat($event)"
+  *ngIf="toggleModalInterviewFormat">
+</ho1a-modal-interview-format>

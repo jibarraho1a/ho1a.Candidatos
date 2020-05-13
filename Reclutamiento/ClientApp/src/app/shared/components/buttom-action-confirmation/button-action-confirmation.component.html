@@ -1,0 +1,19 @@
+<div class="btn-popover">
+  <ho1a-confirmation
+    [textCancel]="textCancel"
+    [textAccept]="textAccept"
+    [title]="title"
+    [positionLeft]="positionLeft"
+    [visible]="toggle"
+    (toggled)="onToggled()"
+    (accept)="onConfirm()"
+    (cancel)="onCancel()">
+  </ho1a-confirmation>
+  <a (click)="onClick()"
+     *ngIf="isVisible()"
+     [attr.disabled]="isDisabled()"
+     class="btn btn-primary">
+    <mat-icon>{{ typebutton }}</mat-icon>
+    <span class="hidden-xs">{{ textButton }}</span>
+  </a>
+</div>

@@ -1,0 +1,40 @@
+.modal-body{
+  display: flex;
+  align-items: center;
+}
+
+.opcionMenu{
+  margin: auto;
+  display: table-cell;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #005CA9;
+  width: 350px;
+  height: 250px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 5px 7px #707070;
+  opacity: 1;
+  border-radius: 1.3rem;
+  text-align: center;
+}
+
+.modal-dialog{
+  padding: 20px;
+}
+
+button.btn.btn-primary {
+  height: 45px;
+  width: 300px;
+  border-radius: 0.25rem;
+  text-transform: none;
+  font-size: 17px;
+  margin-top: 20px;
+  background: #1a94c4;
+  border: 1px solid #1a34c4;
+}
+
+button.btn.btn-primary:hover {
+  background: #1a34c4;
+  border: 1px solid #1a94c4;
+}

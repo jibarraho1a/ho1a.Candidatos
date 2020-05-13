@@ -1,0 +1,31 @@
+<div class="modal">
+  <div class="modal-box"
+       [ngStyle]="{'width':width}">
+    <div class="btn-modal-close"
+         (click)="close()">
+      <i class="material-icons">close</i>
+    </div>
+    <div class="modal-box-header">
+      <h6>{{ tittle }}</h6>
+    </div>
+    <div class="modal-box-body">
+      <ng-content select="[modal-body]"></ng-content>
+    </div>
+    <div class="modal-box-footer">
+      <div class="btn-group right">
+        <a *ngFor="let buttom of buttoms"
+           class="btn btn-primary"
+           (click)="onClick(buttom)">
+          <mat-icon>{{ buttom.class }}</mat-icon>
+          <span>{{ buttom.value }}</span>
+        </a>
+        <a class="btn btn-primary-outline"
+           (click)="onCancel()">
+          <i class="material-icons">close</i>
+          <span>Cancelar</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="overlay"></div>
+</div>

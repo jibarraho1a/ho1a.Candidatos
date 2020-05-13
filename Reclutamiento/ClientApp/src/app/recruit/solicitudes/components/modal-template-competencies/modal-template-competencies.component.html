@@ -1,0 +1,60 @@
+<form [formGroup]="form">
+  <ho1a-modal-form
+    [tittle]="title"
+    [form]="form"
+    [buttoms]="butttom"
+    (cancel)="onCancel()"
+    (clickButtom)="onClickButtom($event)">
+    <div modal-body>
+      <div class="row margin-top-20px" *ngIf="!readonly">
+        <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9 margin-bottom-5px">
+          <mat-form-field class="col-xs-12 col-sm-8 col-md-9 col-lg-9 margin-bottom-5px">
+            <input
+              matInput
+              placeholder="Escribe la competencia..."
+              formControlName="nombre">
+            <mat-hint>
+              <span
+                [ngClass]="{
+                'required': showAsRequired('nombre')
+              }"></span>
+            </mat-hint>
+            <mat-error>
+              <span [innerHTML]="'Competencia invalida'"></span>
+            </mat-error>
+          </mat-form-field>
+
+          <!--
+              
+          [innerHTML]="'Requeridos'">
+              <input type="text"
+                 class="input"
+                 formControlName="nombre"
+                 placeholder="Escribe la competencia...">-->
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+          <a class="btn btn-primary"
+             (click)="onAdd()">
+            <i class="material-icons">add</i>
+            <span class="hidden-xs">Agregar</span>
+          </a>
+        </div>
+      </div>
+      <div class="margin-top-20px">
+        <div *ngFor="let item of data; let i = index">
+          <div class="row middle-xs">
+            <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+              <p class="text-gray">{{ item.nombre }}</p>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 end-lg end-md end-sm end-xs"
+                 *ngIf="canDelete(item)">
+              <i class="material-icons cursor-pointer"
+                 (click)="onDelete(item, i)">delete</i>
+            </div>
+          </div>
+          <div class="divider margin-top-5px margin-bottom-5px"></div>
+        </div>
+      </div>
+    </div>
+  </ho1a-modal-form>
+</form>

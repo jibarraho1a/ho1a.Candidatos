@@ -1,0 +1,64 @@
+<div *ngIf="visibleButtomInterview"
+     class="row middle-xs entrevistas">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-bottom-10px">
+      <div class="btn-group">
+        <ho1a-step-interview-buttom
+          [data]="{
+            title:'Nuevo entrevistador',
+            id: this.candidate.data.candidatoId,
+            tipo: 'nuevoEntrevistador'
+          }">
+        </ho1a-step-interview-buttom>
+      </div>
+    </div>
+</div>
+<form [formGroup]="form">
+  <div class="row candidato-idoneo"
+           *ngIf="visibleCheckSuitableCandidate && !toggleCheck">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 margin-bottom-10px">
+      <p class="text-gray text-medium text-14px">¿El candidato es idóneo?</p>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 margin-bottom-10px">
+      <mat-radio-group class="flex end-lg end-md start-sm start-xs"
+                       formControlName="status">
+        <mat-radio-button class="flex flex-center margin-right-20px"
+                          value="1">
+          <span class="text-medium text-14px">Si</span>
+        </mat-radio-button>
+        <mat-radio-button class="flex flex-center"
+                          value="-1">
+          <span class="text-medium text-14px">No</span>
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+  <div class="row candidato-idoneo"
+       *ngIf="visibleCheckSuitableCandidate && toggleCheck">
+    <mat-form-field class="col-xs-12 col-sm-6 col-md-6 col-lg-6 margin-bottom-30px">
+      <mat-select placeholder="¿Porqué no es idoneo?"
+                  formControlName="status">
+        <mat-option *ngFor="let item of estatus" [value]="item.value">
+          {{ item.text }}
+        </mat-option>
+      </mat-select>
+      <mat-hint>
+        <span [innerHTML]="'Requerido'"></span>
+      </mat-hint>
+      <mat-error>
+        <span [innerHTML]="'Requerido'"></span>
+      </mat-error>
+    </mat-form-field>
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 flex end-xs">
+      <div class="btn-group">
+<!--        <a class="btn btn-xs btn-success"
+           (click)="saveNoSuitable()">
+          <i class="material-icons">check</i>
+        </a>-->
+        <a class="btn btn-xs btn-danger"
+           (click)="cancelNoSuitable()">
+          <i class="material-icons">close</i>
+        </a>
+      </div>
+    </div>
+  </div>
+</form>

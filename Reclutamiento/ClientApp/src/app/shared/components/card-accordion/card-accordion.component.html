@@ -1,0 +1,25 @@
+<div class="row margin-bottom-20px padding-top-20px nombre-candidato">
+  <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+    <div class="number-circle size40px margin-bottom-10px">{{ index }}</div>
+  </div>
+  <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+    <ng-content select="[card-accordion-tittle]"></ng-content>
+  </div>
+</div>
+<ng-content select="[card-accordion-body]"></ng-content>
+<ho1a-card-accordion-title
+  [title]="'Datos generales'"
+  [toggle]="toggle"
+  (click)="onToggle()">
+</ho1a-card-accordion-title>
+<div class="row accordeon-general"
+     [ngClass]="{
+      'open': toggle
+     }"><!--Agregar o remover la clase  .open  a este nivel al hacer clic en el div accordeon-title-general -->
+    <ho1a-card-accordion-section
+      class="col-xs-12 col-sm-12 col-md-12 col-lg-12"
+      *ngFor="let section of data?.sections"
+      [data]="section"
+      (clickpopup)="onClickpopup($event)">
+    </ho1a-card-accordion-section>
+</div>

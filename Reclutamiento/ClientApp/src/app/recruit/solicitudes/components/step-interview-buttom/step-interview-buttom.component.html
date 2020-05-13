@@ -1,0 +1,30 @@
+<form [formGroup]="form">
+  <ho1a-buttom-popover
+    [name]="data.title"
+    [title]="data.title"
+    [buttoms]="buttomsPopover"
+    (toggleClick)="onToggleClick($event)"
+    (clickButtom)="onClickButtom($event)" >
+    <div buttom-popover-tittle>
+      {{ data.title }}
+    </div>
+    <div buttom-popover-body>
+      <div class="row margin-bottom-10px">
+          <mat-form-field class="col-sm-8">
+            <input
+              #userName
+              matInput
+              (keydown)="onKeydown($event)"
+              placeholder="Nombre de usuario"
+              formControlName="userName">
+          </mat-form-field>
+          <a class="btn btn-xs btn-primary col-sm-3"
+             (click)="onSearchCollaboratorByUserName()">
+            <i class="material-icons">search</i>
+          </a>
+        </div>
+      <p class="margin-bottom-10px">{{ nameComplete.value }}</p>
+      <p class="margin-bottom-10px text-rojo" *ngIf="result" >{{ result }}</p>
+    </div>
+  </ho1a-buttom-popover>
+</form>

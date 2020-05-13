@@ -1,0 +1,29 @@
+.accordeon-general {
+  padding: 0px 10px;
+}
+
+.accordeon-general {
+  height: 0px;
+  min-height: 0px;
+  overflow: hidden;
+  transition: all .3s;
+}
+
+.accordeon-general.open {
+  height: auto;
+  min-height: 10px;
+  overflow: hidden;
+  transition: all .3s;
+}
+
+.nombre-candidato {
+  min-height: 90px;
+}
+
+.entrevistas {
+  min-height: 50px;
+}
+
+.number-circle.active {
+  background: #37c41a;
+}

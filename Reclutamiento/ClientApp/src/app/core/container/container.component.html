@@ -1,0 +1,28 @@
+<!-- <ho1a-loader></ho1a-loader> -->
+<div [ngClass]="{'hide-menu': toggled}">
+    <ho1a-header
+        *ngIf="user$.authenticated"
+        [user]="user$"
+        (logout)="onLogout()"
+        (toggled)="onToggled()"
+        (toggledsm)="onToggledSm()">
+    </ho1a-header>
+    <ho1a-side-nav
+        [ngClass]="{'show-menu': toggledSm}"
+        *ngIf="user$.authenticated"
+        [user]="user$"
+        [menu]="menus"
+        [specialPermission]="user$.isAdmin"
+        (toggledsm)="onToggledSm()"
+        (logout)="onLogout()">
+    </ho1a-side-nav>
+    <div class="content">
+        <ho1a-title-bar
+        *ngIf="user$.authenticated"
+        [titleBar]="titleBar">
+      </ho1a-title-bar>
+        <div class="wrap-content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

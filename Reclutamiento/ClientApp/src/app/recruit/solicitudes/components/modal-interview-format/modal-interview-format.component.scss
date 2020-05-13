@@ -1,0 +1,43 @@
+.ponderado {
+  background: #43495e;
+  color: #fff;
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+
+.icon-selectable {
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.icon-selectable.yes:hover {
+  color: #37c41a;
+}
+
+.icon-selectable.no:hover {
+  color: #f44336;
+}
+
+.icon-selectable.yes.active {
+  color: #37c41a;
+}
+
+.icon-selectable.no.active {
+  color: #f44336;
+}
+
+.material-icons.yes.active {
+  color: #37c41a;
+}
+
+.material-icons.no.active {
+  color: #f44336;
+}
+
+.font-size-75 {
+  font-size: 75%;
+}
+
+.readOnly {
+  color: rgba(0,0,0,.54)
+}

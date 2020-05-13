@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "gfCvxheZBF2nD+PesRP4b2WTEljEVI2fD3w0T42Xq1NEU2sBvdnlulRvdbfYV3I5jGJRhXTwZvSyQqpdpOHXKw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.reclutamiento.enums\\ho1a.reclutamiento.enums.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jibarrao\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\jibarrao\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\jibarrao\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

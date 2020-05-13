@@ -1,0 +1,49 @@
+<!-- <ho1a-filter
+  [toggle]="showFilter"
+  [tittle]="tittleFilter"
+  [activateDateFilter]="false"
+  [columnsDefs]="options?.columnsDefs"
+  [items]="items"
+  [totalResults]="totalResults"
+  (textFilter)="textFilter($event)"
+  (toggleFilter)="toggleFilter($event)"
+  (orderByChange)="orderByChange($event)"
+  (columnsFilterForm)="columnsFilterForm($event)">
+</ho1a-filter> -->
+<div class="box">
+  <div class="box-header">
+    <div class="row middle-xs">
+      <div class="col-xs-12 col-sm col-md col-lg">
+        <h5>Reporte Detallado</h5>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm col-md col-lg">
+      <div class="btn-group right">
+        <a class="btn btn-primary"
+           *ngIf="!showFilter"
+           (click)="onShowFilter()">
+          <i class="material-icons">filter_list</i><span>Mostrar filtros</span>
+        </a><!-- Al presionar este botón, agregar clase .show-filter  al nivel del div  .wrap-filter  para mostrar el panel de filtros-->
+        <!-- <ho1a-export
+          [json]="itemsFiltered"
+          [columnsDefs]="options?.columnsDefs">
+        </ho1a-export> -->
+      </div>
+    </div>
+  </div>
+  <div class="box-body">
+    <ho1a-highlighted-boxes
+      [data]="status"
+      [selectedbox]="selectedbox"
+      (clickBox)="onClickStatus($event)" >
+    </ho1a-highlighted-boxes>
+    <!-- <h3 *ngIf="!loading && itemsFiltered?.length === 0 && items?.length === 0">Sin registros.</h3> -->
+    <!-- <ho1a-list-item
+      *ngFor="let item of itemsFiltered"
+      (edith)="onEdith($event)"
+      (delete)="onDelete($event)"
+      [options]="options"
+      [row]="item">
+    </ho1a-list-item> -->
+  </div>
+</div>

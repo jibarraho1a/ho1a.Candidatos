@@ -1,0 +1,39 @@
+<div class="wizard step-11">
+  <!--REGRESAR-->
+  <div class="wrap-step wrap-nav prev"
+       (click)="back()">
+    <div class="step">
+      <i class="material-icons">arrow_back</i>
+    </div>
+    <p class="step-name">REGRESAR</p>
+    <div class="wizard-line-step"></div>
+  </div>
+
+  <div class="wrap-step" (click)="setProcesses(i, item)" *ngFor="let item of processes; index as i;">
+    <div class="step"
+         [ngClass]="{
+           'step-check': item.stateValidation === 0,
+           'step-error': item.error
+          }"
+         title="{{ item.name }}">
+      <div class="error"></div>
+      <div class="check bg-green">
+        <i class="material-icons">arrow_downward</i>
+      </div>
+      <span>{{ i + 1 }}</span>
+    </div>
+    <p class="step-name text-gray text-truncate">{{ item.name }}</p>
+    <div class="wizard-line-step"></div>
+  </div>
+
+  <!--SIGUIENTE-->
+  <div class="wrap-step wrap-nav next"
+       (click)="next()">
+    <div class="step">
+      <i class="material-icons">arrow_forward</i>
+    </div>
+    <p class="step-name">SIGUIENTE</p>
+    <div class="wizard-line-step"></div>
+  </div>
+
+</div>

@@ -1,0 +1,84 @@
+<form [formGroup]="form">
+  <div class="box-body" *ngIf="visible()">
+    <div class="flex flex-center flex-wrap flex-between margin-bottom-30px">
+      <h5>{{ currentStep?.description }}</h5>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+        <p class="text-16px margin-bottom-20px">Actualmente asignado:</p>
+        <div class="row middle-xs margin-bottom-30px">
+          <div class="col-xs-3 col-sm-1 col-md-3 col-lg-2">
+            <img class="img-responsive" src="assets/img/user_photo.png">
+          </div>
+          <div class="col-xs-9 col-sm-11 col-md-9 col-lg-10">
+            <p class="text-uppercase text-green text-bold text-11px margin-bottom-5px">ASIGNADO A:</p>
+            <h6 class="text-bold text-16px">{{ (data?.asignado?.nombre || '') + ' ' + (data?.asignado?.apellidos || '') }}</h6>
+            <p class="text-gray text-13px">{{ ( data?.asignado?.puesto || '') }}</p>
+          </div>
+        </div>
+        <div class="row middle-xs margin-bottom-30px">
+          <div class="col-xs-3 col-sm-1 col-md-3 col-lg-2">
+            <i class="material-icons icon-preview">date_range</i>
+          </div>
+          <div class="col-xs-9 col-sm-11 col-md-9 col-lg-10">
+            <p class="text-uppercase text-green text-bold text-11px margin-bottom-5px">INICIO DE RECLUTAMIENTO</p>
+            <h6 class="text-bold text-16px">{{ inicioReclutamiento }}</h6>
+          </div>
+        </div>
+        <div class="btn-group"
+             *ngIf="!toggleReassignment && canModify">
+          <a class="btn btn-primary-outline"
+             *ngIf="getActionByControl('ReasignarRequisicion').visible"
+             (click)="onToggledReassignment()" >
+            <i class="material-icons">cached</i>
+            <span>{{ getActionByControl('ReasignarRequisicion').descripcion }}</span>
+          </a>
+          <a class="btn btn-primary"
+             *ngIf="getActionByControl('ConfirmarAsignacionRequisicion').visible"
+             (click)="onSaveAssignment()">
+            <i class="material-icons">check</i>
+            <span>{{ getActionByControl('ConfirmarAsignacionRequisicion').descripcion }}</span>
+          </a>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 margin-bottom-10px"
+           *ngIf="toggleReassignment && canModify"><!-- Este div debe estar oculto hasta que se presione el boton reasignar -->
+        <p class="text-16px margin-bottom-20px">Reasignar a:</p>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="margin-bottom-30px">
+              <mat-form-field class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <mat-select placeholder="Colaborador"
+                            formControlName="reasignado">
+                  <mat-option *ngFor="let item of databackground?.colaboradores" [value]="item.value">
+                    {{ item.text }}
+                  </mat-option>
+                </mat-select>
+                <mat-hint  *ngIf="true">Requerido</mat-hint>
+                <mat-error *ngIf="false">
+                  <strong>Requerido</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="btn-group">
+              <a class="btn btn-danger"
+                 (click)="onCancelReassignment()">
+                <i class="material-icons">not_interested</i>
+                <span>Cancelar</span>
+              </a>
+              <a class="btn btn-primary"
+                 (click)="onSaveReAssignment()">
+                <i class="material-icons">save</i>
+                <span>Guardar</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Footer-->
+  <div class="box-footer flex flex-center flex-wrap flex-between" *ngIf="visible()">
+  </div>
+</form>

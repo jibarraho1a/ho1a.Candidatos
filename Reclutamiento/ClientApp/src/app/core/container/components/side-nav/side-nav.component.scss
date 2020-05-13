@@ -1,0 +1,207 @@
+$primary-color: #004c9b;
+
+:host {
+  width: 300px;
+  height: 100vh;
+  background: #fff;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  overflow: auto;
+  z-index: 99;
+  transition: all 0.3s;
+}
+
+.btn-cerrar {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.aside-logo {
+  width: 100%;
+  height: auto;
+  text-align: center;
+
+  .wrap-logo {
+    padding: 15px;
+  }
+
+  .wrap-logo img {
+    width: 94%;
+  }
+}
+
+.aside-user-photo {
+  width: 100%;
+  height: auto;
+
+  .wrap-user-photo {
+    padding: 15px 15px 0 15px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .recruiter-metrics {
+    ul {
+      padding: 7px;
+      list-style: none;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    li {
+      padding: 7px 15px 7px 15px;
+      transition: all 0.3s;
+
+      i {
+        margin-right: .5rem;
+        font-size: 21px;
+        vertical-align: -6px;
+      }
+
+      span {
+        font-weight: bold;
+        color: $primary-color;
+        font-size: 13px;
+        padding-left: 4px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .user-photo {
+    position: relative;
+    margin-right: 10px;
+
+    .status {
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .photo {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  .user-info {
+    color: $primary-color;
+    width: 160px;
+    height: auto;
+  }
+}
+
+.aside-nav {
+  width: 100%;
+  height: auto;
+  margin-top: 11px;
+
+  ul {
+    list-style: none;
+    padding: 0px;
+    font-size: 14px;
+    margin-top: 0;
+
+    li {
+      padding: 7px 15px 7px 15px;
+      margin-bottom: 5px;
+      border-left: 5px solid transparent;
+      transition: all 0.3s;
+
+      i {
+        margin-right: 20px;
+        font-size: 20px;
+        vertical-align: -3px;
+      }
+    }
+
+    a {
+      :hover {
+        li {
+          color: $primary-color;
+          border-left: 5px solid transparent;
+        }
+      }
+    }
+
+    a.active {
+      li {
+        color: $primary-color;
+        border-left: 5px solid $primary-color;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.menu {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  color: #005CA9;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.logout {
+  position: fixed;
+  bottom: 0;
+}
+
+@media (max-width: 90em) {
+  :host {
+    width: 250px;
+  }
+
+  .aside-user-photo {
+    .user-photo {
+      margin-bottom: 10px;
+    }
+
+    .wrap-user-photo {
+      padding-top: 0px;
+      padding-top: 0px;
+    }
+  }
+}
+
+@media (max-width: 64em) {
+  :host {
+    width: 300px;
+    left: -1000px;
+  }
+
+  :host.show-menu {
+    left: 0px;
+  }
+
+  .aside-user-photo {
+    .user-photo {
+      margin-bottom: 0px;
+    }
+
+    .wrap-user-photo {
+      padding-top: 15px;
+    }
+  }
+
+  .btn-cerrar {
+    display: block;
+  }
+}

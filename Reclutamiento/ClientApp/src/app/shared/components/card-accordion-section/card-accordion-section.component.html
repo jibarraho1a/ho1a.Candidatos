@@ -1,0 +1,33 @@
+<div class="accordeon"
+     [ngClass]="{
+      'open': toggle
+     }">
+  <ho1a-card-accordion-section-title
+    [title]="data?.tittle"
+    [toggle]="toggle"
+    (click)="onToggle()">
+  </ho1a-card-accordion-section-title>
+  <div class="accordeon-content">
+    <div class="row margin-top-10px"
+         *ngFor="let row of data?.rows">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <p class="text-gray">{{ row?.label }}</p>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <p class="text-bold text-right text-left-xs">
+          <span *ngIf="!isRowWithEvent(row?.type)"
+                [innerHTML]="getHtmlRow(row)">
+          </span>
+          <a *ngIf="row?.type === typePopUp"
+             class="material-icons cursor-pointer"
+             (click)="onPopUp(row?.value)">launch
+          </a>
+          <a *ngIf="row?.type === typePopUpDateTime"
+             class="material-icons cursor-pointer"
+             (click)="onPopUp(row?.value)">date_range
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

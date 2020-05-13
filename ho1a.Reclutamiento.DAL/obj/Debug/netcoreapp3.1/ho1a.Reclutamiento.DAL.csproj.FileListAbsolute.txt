@@ -1,0 +1,17 @@
+C:\Users\davilam\Documents\Development\ho1a.Reclutamiento\Dev\ho1a.Reclutamiento.DAL\bin\Debug\netcoreapp3.1\ho1a.Reclutamiento.DAL.deps.json
+C:\Users\davilam\Documents\Development\ho1a.Reclutamiento\Dev\ho1a.Reclutamiento.DAL\bin\Debug\netcoreapp3.1\ho1a.Reclutamiento.DAL.dll
+C:\Users\davilam\Documents\Development\ho1a.Reclutamiento\Dev\ho1a.Reclutamiento.DAL\obj\Debug\netcoreapp3.1\ho1a.Reclutamiento.DAL.csprojAssemblyReference.cache
+C:\Users\davilam\Documents\Development\ho1a.Reclutamiento\Dev\ho1a.Reclutamiento.DAL\obj\Debug\netcoreapp3.1\ho1a.Reclutamiento.DAL.AssemblyInfoInputs.cache
+C:\Users\davilam\Documents\Development\ho1a.Reclutamiento\Dev\ho1a.Reclutamiento.DAL\obj\Debug\netcoreapp3.1\ho1a.Reclutamiento.DAL.AssemblyInfo.cs
+C:\Users\davilam\Documents\Development\ho1a.Reclutamiento\Dev\ho1a.Reclutamiento.DAL\bin\Debug\netcoreapp3.1\ho1a.Reclutamiento.DAL.pdb
+C:\Users\davilam\Documents\Development\ho1a.Reclutamiento\Dev\ho1a.Reclutamiento.DAL\obj\Debug\netcoreapp3.1\ho1a.Reclutamiento.DAL.dll
+C:\Users\davilam\Documents\Development\ho1a.Reclutamiento\Dev\ho1a.Reclutamiento.DAL\obj\Debug\netcoreapp3.1\ho1a.Reclutamiento.DAL.pdb
+C:\Users\jibarrao\source\repos\Dev\ho1a.Reclutamiento.DAL\bin\Debug\netcoreapp3.1\ho1a.Reclutamiento.DAL.deps.json
+C:\Users\jibarrao\source\repos\Dev\ho1a.Reclutamiento.DAL\bin\Debug\netcoreapp3.1\ho1a.Reclutamiento.DAL.dll
+C:\Users\jibarrao\source\repos\Dev\ho1a.Reclutamiento.DAL\bin\Debug\netcoreapp3.1\ho1a.Reclutamiento.DAL.pdb
+C:\Users\jibarrao\source\repos\Dev\ho1a.Reclutamiento.DAL\obj\Debug\netcoreapp3.1\ho1a.Reclutamiento.DAL.csprojAssemblyReference.cache
+C:\Users\jibarrao\source\repos\Dev\ho1a.Reclutamiento.DAL\obj\Debug\netcoreapp3.1\ho1a.Reclutamiento.DAL.csproj.CoreCompileInputs.cache
+C:\Users\jibarrao\source\repos\Dev\ho1a.Reclutamiento.DAL\obj\Debug\netcoreapp3.1\ho1a.Reclutamiento.DAL.AssemblyInfoInputs.cache
+C:\Users\jibarrao\source\repos\Dev\ho1a.Reclutamiento.DAL\obj\Debug\netcoreapp3.1\ho1a.Reclutamiento.DAL.AssemblyInfo.cs
+C:\Users\jibarrao\source\repos\Dev\ho1a.Reclutamiento.DAL\obj\Debug\netcoreapp3.1\ho1a.Reclutamiento.DAL.dll
+C:\Users\jibarrao\source\repos\Dev\ho1a.Reclutamiento.DAL\obj\Debug\netcoreapp3.1\ho1a.Reclutamiento.DAL.pdb

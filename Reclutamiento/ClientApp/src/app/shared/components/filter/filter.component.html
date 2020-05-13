@@ -1,0 +1,176 @@
+<form [formGroup]="form">
+<div class="wrap-filter"
+     [ngClass]="{
+     'show-filter': toggle
+     }" ><!-- Agregr clase  .show-filter  a este nivel para mostrar el panel de filtros-->
+  <div class="box">
+    <div class="box-header flex flex-center flex-between flex-wrap">
+      <div class="btn-hide-filter cursor-pointer"
+           (click)="onToggleFilter()">
+        <i class="material-icons">arrow_forward</i>
+        <span>Ocultar filtros</span>
+      </div>
+    </div>
+    <div class="box-body">
+      <div class="margin-bottom-30px">
+        <h5 class="bold">{{ tittle }}</h5>
+        <p class="text-gray" *ngIf="totalResults > 0" >{{ totalResults }} resultados totales</p>
+      </div>
+      <!-- //////////////// FILTRO POR FECHA ///////////////////////// -->
+      <div class="filter-group"
+           *ngIf="activateDateFilter">
+        <div class="filter-title-group">Filtro por fecha</div>
+        <div class="filter-date">
+          <span>De:</span>
+          <input type="date">
+        </div>
+        <div class="filter-date">
+          <span>A:</span>
+          <input type="date">
+        </div>
+        <div class="row middle-xs">
+          <div class="col-xs-12 col-sm-8 col-md-7 col-lg-9"></div>
+          <div class="col-xs-12 col-sm-4 col-md-5 col-lg-3">
+            <div class="btn-group">
+              <a class="btn btn-primary btn-block"><i class="material-icons">search</i><span class="text-13px">BUSCAR</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //////////////// FILTRO ORDENAR POR /////////////////////// -->
+      <div class="filter-group">
+        <div class="filter-title-group">Ordenar por:</div>
+        <div class="row middle-xs">
+          <mat-form-field class="col-xs-12 col-sm-8 col-md-7 col-lg-9">
+            <mat-select placeholder="Columna"
+                        formControlName="columnOrderBy">
+              <mat-option *ngFor="let item of columnsApplyOrderBy" [value]="item.field">
+                {{ item.title }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <div class="col-xs-12 col-sm-4 col-md-5 col-lg-3">
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 padding-left-5px padding-right-5px">
+                  <a class="btn btn-primary"
+                     [attr.disabled]="columnOrderByContaintValue ? null : 'disabled'"
+                     (click)="OnOrderByChangeDown()">
+                   <i class="material-icons">arrow_drop_down</i>
+                  </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 padding-left-5px padding-right-5px">
+                  <a class="btn btn-primary"
+                     [attr.disabled]="columnOrderByContaintValue ? null : 'disabled'"
+                     (click)="OnOrderByChangeUp()">
+                     <i class="material-icons">arrow_drop_up</i>
+                  </a>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- //////////////// TIPO DE FILTRADO ///////////////////////// -->
+      <div class="filter-group">
+        <div class="filter-title-group">Tipo de filtrado</div>
+        <div class="filter-row"
+             [ngClass]="{
+              'active': matchTypeFilterSelected,
+              'active-type': matchTypeFilterSelected
+              }">
+          <div class="row width-100 padding-left-10px padding-right-10px">
+            <div class="filter-check-name"><!--se agrega la clase active-->
+              <div class="filter-check">
+                <input name="typeFilter"
+                       type="radio"
+                       value="1"
+                       formControlName="typeFilter">
+              </div>
+              <div class="filter-name">Filtrado por coincidencias</div>
+            </div>
+            <div class="filter-quantity"
+                 [ngClass]="{
+                  'hidden': !matchTypeFilterSelected
+                 }">
+              <span>Activo</span>
+            </div>
+          </div>
+        </div>
+        <div class="filter-row"
+             [ngClass]="{
+              'active': selectionTypeFilterSelected,
+              'active-type': selectionTypeFilterSelected
+              }">
+          <div class="row width-100 padding-left-10px padding-right-10px">
+            <div class="filter-check-name">
+              <div class="filter-check">
+                <input name="typeFilter"
+                       type="radio"
+                       value="2"
+                       formControlName="typeFilter">
+              </div>
+              <div class="filter-name">Filtrado por selección</div>
+            </div>
+            <div class="filter-quantity"
+                 [ngClass]="{
+                  'hidden': !selectionTypeFilterSelected
+                 }">
+              <span>Activo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //////////////// BUSQUEDA POR COINCIDENCIA //////////////// -->
+      <div class="filter-group"
+           *ngIf="matchTypeFilterSelected">
+        <div class="filter-title-group">Búsqueda</div>
+        <div class="row middle-xs">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <input class="input" type="text"
+                   formControlName="textSearch"
+                   (keyup)="onTextFilter($event)">
+          </div>
+        </div>
+      </div>
+      <!-- //////////////// BUSQUEDA POR CATEGORÍAS ////////////////// -->
+      <div
+        *ngIf="selectionTypeFilterSelected">
+
+        <div formGroupName="categories">
+          <div *ngFor="let c of columnsApplyFilter;">
+            <div class="filter-title-group">{{c.title}}</div>
+            <div class="filter-group">
+              <div class="filter-row">
+              <mat-form-field class="width-100">
+                <mat-select [placeholder]="c.tittle" [formControlName]="c.field" multiple>
+                  <mat-select-trigger>
+                    {{categoriesControl[c.field].value ? categoriesControl[c.field].value[0] : ''}}
+                    <span *ngIf="categoriesControl[c.field].value?.length > 1" class="additional-selection">
+                    (+{{categoriesControl[c.field].value.length - 1}} otros)
+                    </span>
+                    <span *ngIf="categoriesControl[c.field].value?.length > 0 && categoriesControl[c.field].value[0] == null" class="additional-selection">
+                    (vacios)
+                    </span>
+                  </mat-select-trigger>
+                  <mat-option *ngFor="let item of itemsWithdistinct[c.field]" [value]="item">{{item}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- //////////////// BOTÓN APLICAR //////////////// -->
+        <div class="filter-group">
+          <div class="btn-group">
+            <a class="btn btn-block btn-primary"
+                (click)="applyFilter()">
+              <i class="material-icons">check</i>
+              <span class="text-13px">APLICAR TODO</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</form>

@@ -1,0 +1,31 @@
+.accordeon {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.accordeon.open .accordeon-title {
+  color: #37c41a;
+}
+
+.accordeon .arrow {
+  transition: all .3s;
+  color: #43495e;
+}
+
+.accordeon.open .arrow {
+  transform: rotate(180deg);
+}
+
+.accordeon .accordeon-content {
+  height: 0px;
+  min-height: 0px;
+  overflow: hidden;
+  transition: all .3s;
+}
+
+.accordeon.open .accordeon-content {
+  height: auto;
+  min-height: 10px;
+  overflow: hidden;
+  transition: all .3s;
+}

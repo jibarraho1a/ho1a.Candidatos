@@ -1,0 +1,15 @@
+<div class="rating"
+     *ngFor="let item of ratings"
+     (click)="onClick(item.value)">
+  <input type="radio"
+         name="rating"
+         [value]="item.value"
+  >
+  <label class="full"
+         [title]="item.value"
+         [ngClass]="{
+          checked: item.checked,
+          'cursor-pointer': !readOnly
+          }"
+  ></label>
+</div>

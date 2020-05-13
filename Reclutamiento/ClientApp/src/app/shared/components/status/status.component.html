@@ -1,0 +1,79 @@
+<h6 class="margin-bottom-20px">Matriz de aprobación</h6>
+<div class="wrap-estatus-requisicion">
+  <div class="estatus-requision"
+       [ngClass]="{
+        'estatus-pasado': item.stateValidation >= 1,
+        'estatus-actual': item.stateValidation === 0,
+        'estatus-futuro': item.stateValidation === -1
+        }"
+       *ngFor="let item of status">
+    <i class="material-icons"
+       *ngIf="item.stateValidation === 4">
+      cached
+    </i>
+    <i class="material-icons"
+       *ngIf="item.stateValidation === 3">
+      cancel
+    </i>
+    <i class="material-icons"
+       *ngIf="item.stateValidation === 2">
+      not_interested
+    </i>
+    <i class="material-icons"
+       *ngIf="item.stateValidation === 1">
+      check_circle
+    </i>
+    <i class="material-icons"
+       *ngIf="item.stateValidation === 0">
+      radio_button_checked
+    </i>
+    <i class="material-icons"
+       *ngIf="item.stateValidation === -1">
+      radio_button_unchecked
+    </i>
+    <div>
+      <p class="text-bold">{{ item.name }}</p>
+      <p class="text-10px text-gray">{{ item.info }}</p>
+      <p *ngIf="item.stateValidation >= 1" class="text-10px text-gray">{{ item.date | date:'medium' }}</p>
+      <p class="text-10px text-gray comentario1"
+         *ngIf="item.description">
+        {{ item.description }}
+      </p>
+      <div class="time-lapse"
+           *ngIf="item.timelapse">
+        <i class="material-icons">timelapse</i>
+        <p>{{ item.timelapse }}</p>
+      </div>
+      <div class="btn-group" *ngIf="item.stateValidation === 0 && enableButtonAction">
+        <div class="btn-popover"
+             *ngIf="item.canApprove">
+          <ho1a-confirmation
+            [positionLeft]="true"
+            [visible]="toggledApprove"
+            (accept)="onchangeStatus(item, 1)"
+            (cancel)="onToggledApprove()">
+          </ho1a-confirmation>
+          <a class="btn btn-xs btn-success" (click)="onToggledApprove()">Aprobar</a>
+        </div>
+        <div class="btn-popover"
+             *ngIf="item.canDeny">
+          <ho1a-confirmation
+            [visible]="toggledReject"
+            (accept)="onchangeStatus(item, 2)"
+            (cancel)="onToggledReject()">
+          </ho1a-confirmation>
+          <a class="btn btn-xs btn-danger" (click)="onToggledReject()">Rechazar</a>
+        </div>
+        <div class="btn-popover"
+             *ngIf="item.canCancel">
+          <ho1a-confirmation
+            [visible]="toggledCancel"
+            (accept)="onchangeStatus(item, 3)"
+            (cancel)="onToggledCancel()">
+          </ho1a-confirmation>
+          <a class="btn btn-xs btn-danger" (click)="onToggledCancel()">Cancelar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

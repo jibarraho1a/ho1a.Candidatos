@@ -1,0 +1,101 @@
+<form [formGroup]="form">
+  <ho1a-modal-form
+    [tittle]="'Complemento de CV'"
+    [form]="form"
+    [buttoms]="butttom"
+    (cancel)="onCancel()"
+    (clickButtom)="onClickButtom($event)">
+    <div modal-body>
+      <div class="row margin-top-20px">
+        <mat-form-field class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-bottom-20px">
+          <input
+            matInput
+            placeholder="Empresa anterior"
+            formControlName="detalleUltimoTrabajoEmpresa">
+          <mat-hint>
+            <span [ngClass]="{
+                  'required': showAsRequired('detalleUltimoTrabajoEmpresa')
+                  }"
+                  [innerHTML]="'Requerido'"></span>
+          </mat-hint>
+          <mat-error>
+            <span [innerHTML]="'Requerido'"></span>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-bottom-20px">
+          <input
+            matInput
+            placeholder="Puesto anterior"
+            formControlName="detalleUltimoTrabajoPuesto">
+          <mat-hint>
+            <span [ngClass]="{
+                  'required': showAsRequired('detalleUltimoTrabajoPuesto')
+                  }"
+                   [innerHTML]="'Requerido'"></span>
+          </mat-hint>
+          <mat-error>
+            <span [innerHTML]="'Requerido'"></span>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="row margin-top-20px">
+        <mat-form-field class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-bottom-20px">
+          <mat-select placeholder="Último salario"
+                      formControlName="detalleUltimoSalarioId">
+            <mat-option *ngFor="let item of ultimosSalarios" [value]="item.value">
+              {{ item.text }}
+            </mat-option>
+          </mat-select>
+          <mat-hint>
+            <span [ngClass]="{
+                  'required': showAsRequired('detalleUltimoSalarioId')
+                  }"
+                  [innerHTML]="'Requerido'"></span>
+          </mat-hint>
+          <mat-error>
+            <span [innerHTML]="'Requerido'"></span>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-bottom-20px">
+          <input
+            matInput
+            min="0"
+            currencyMask
+            placeholder="Pretensión económica"
+            formControlName="detallePretencionEconomica">
+          <mat-hint>
+            <span [ngClass]="{
+                  'required': showAsRequired('detallePretencionEconomica')
+                  }"
+                  [innerHTML]="'Requerido'"></span>
+          </mat-hint>
+          <mat-error>
+            <span [innerHTML]="'Requerido'"></span>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="row margin-top-20px">
+        <mat-form-field class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-bottom-20px">
+          <input
+            matInput
+            min="0"
+            type="number"
+            placeholder="Años de experiencia"
+            formControlName="anosExperiencia">
+          <mat-hint>
+            <span [ngClass]="{
+                  'required': showAsRequired('anosExperiencia')
+                  }"
+                  [innerHTML]="'Requerido'"></span>
+          </mat-hint>
+          <mat-error>
+            <span [innerHTML]="'Requerido'"></span>
+          </mat-error>
+        </mat-form-field>
+        <mat-checkbox class="col-xs-12 col-sm-6 col-md-3 col-lg-3 margin-bottom-30px"
+                      formControlName="detalleCertificacion">¿Cuenta con certificaciones?
+        </mat-checkbox>
+      </div>
+    </div>
+  </ho1a-modal-form>
+</form>

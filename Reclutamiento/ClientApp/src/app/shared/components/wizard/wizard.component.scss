@@ -1,0 +1,222 @@
+/*///////////////////// WIZARD REQUISICION ///////////////////////*/
+.wizard {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+@media (max-width: 90em) {
+  .wizard {
+    width: 100%;
+  }
+}
+
+.wizard-line {
+  width: 90%;
+  height: 5px;
+  background: #e2e8ed;
+  position: absolute;
+  top: 15px;
+  left: 50px;
+}
+
+@media (max-width: 90em) {
+  .wizard-line {
+    left: 25px;
+  }
+}
+
+@media (max-width: 64em) {
+  .wizard-line {
+    width: 95%;
+  }
+}
+
+@media (max-width: 38em) {
+  .wizard-line {
+    display: none;
+  }
+}
+
+.wizard.step-11 .wrap-step {
+  width: 9.09%;
+}
+
+.wizard.step-10 .wrap-step {
+  width: 10%;
+}
+
+.wizard.step-9 .wrap-step {
+  width: 11.11%;
+}
+
+.wizard.step-8 .wrap-step {
+  width: 12.5%;
+}
+
+.wizard.step-7 .wrap-step {
+  width: 14.28%;
+}
+
+.wizard.step-6 .wrap-step {
+  width: 16.66%;
+}
+
+.wizard.step-5 .wrap-step {
+  width: 20%;
+}
+
+.wizard.step-4 .wrap-step {
+  width: 25%;
+}
+
+.wizard.step-3 .wrap-step {
+  width: 33.33%;
+}
+
+.wizard.step-2 .wrap-step {
+  width: 50%;
+}
+
+.wizard .wrap-step {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 80;
+  position: relative;
+}
+
+@media (max-width: 38em) {
+  .wizard .wrap-step,
+  .wizard.step-10 .wrap-step,
+  .wizard.step-9 .wrap-step,
+  .wizard.step-8 .wrap-step,
+  .wizard.step-7 .wrap-step,
+  .wizard.step-6 .wrap-step,
+  .wizard.step-5 .wrap-step,
+  .wizard.step-4 .wrap-step,
+  .wizard.step-3 .wrap-step,
+  .wizard.step-2 .wrap-step {
+    width: auto;
+  }
+}
+
+.wizard .wrap-step .wizard-line-step {
+  width: 100%;
+  height: 5px;
+  background: #e2e8ed;
+  position: absolute;
+  top: 15px;
+  left: 0px;
+}
+
+.wizard .wrap-nav.prev .wizard-line-step {
+  width: 50%;
+  height: 5px;
+  background: #e2e8ed;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+}
+
+.wizard .wrap-nav.next .wizard-line-step {
+  width: 50%;
+  height: 5px;
+  background: #e2e8ed;
+  position: absolute;
+  top: 15px;
+  right: 50%;
+}
+
+.wizard .wrap-step .step {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 4px solid #e2e8ed;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  color: #668291;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  z-index: 80;
+}
+
+.wizard .wrap-step .step.step-check .check {
+  visibility: visible;
+}
+
+.wizard .wrap-step .step .check {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  visibility: hidden;
+}
+
+.wizard .wrap-step .step .check i {
+  font-size: 20px;
+  color: #fff;
+}
+
+.wizard .wrap-step .step-name {
+  font-size: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+}
+
+@media (max-width: 64em) {
+  .wizard .wrap-step .step-name {
+    display: none;
+  }
+}
+
+.step-error .error {
+  display: block;
+}
+
+.error {
+  width: 12px;
+  height: 12px;
+  background: #f44336;
+  border-radius: 50%;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  z-index: 99;
+  display: none;
+}
+
+.wizard .wrap-nav p {
+  opacity: 0;
+}
+
+.wizard .wrap-nav .step {
+  background: #43495e;
+  color: #fff;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.wizard .wrap-nav .step:hover {
+  background: #37c41a;
+}
+
+.wizard .wrap-nav .step i {
+  font-size: 20px;
+}

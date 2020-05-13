@@ -1,0 +1,39 @@
+<form>
+  <div class="header-nav">
+    <div class="flex flex-center">
+      <div class="header-icon text-gray menu-lg">
+        <i (click)="toggle()" class="material-icons">menu</i>
+      </div>
+      <div class="header-icon text-gray menu-sm">
+        <i (click)="togglesm()" class="material-icons">menu</i>
+      </div>
+    </div>
+    <img class="logo-header" src="assets/img/logo_header.png">
+    <ho1a-notification-button></ho1a-notification-button>
+    <div class="flex flex-center">
+      <div class="header-user-photo">
+        <p class="user-name text-12px margin-0px text-bold margin-right-10px">{{ user?.nombre + " " + user?.apellidos }}</p>
+        <div class="status bg-green"></div>
+        <div class="photo">
+          <img [src]="user?.foto ? user?.foto : 'assets/img/user_photo.png'">
+        </div>
+        <div class="dropdown perfil">
+          <div class="wrap-photo">
+            <img [src]="user?.foto ? user?.foto : 'assets/img/user_photo.png'">
+          </div>
+          <div class="margin-bottom-30px">
+            <p class="text-center text-medium margin-bottom-5px">{{ user?.nombre + " " + user?.apellidos }}</p>
+            <p class="text-center text-gray text-12px">{{ user?.puesto }}</p>
+          </div>
+
+          <a (click)="logoutUser()" class="flex flex-center flex-wrap">
+            <p class= "btn-logout">
+              <i class="material-icons" style="margin-right: 10px; float:left;">power_settings_new</i>
+              Cerrar sesión
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

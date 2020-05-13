@@ -1,0 +1,74 @@
+<div class="wrap-resultado-entrevista margin-bottom-30px">
+  <div class="row margin-bottom-20px flex-center candidato-resultado-entrevista"
+       [ngClass]="{
+          active: candidate.isSuitable
+        }" ><!--Agregar clase .active cuando este desplegado-->
+    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+      <p class="text-green text-11px text-bold">CANDIDATO {{ candidate.isSuitable ? 'IDONEO':'' }}  </p>
+      <h5 class="text-truncate" [title]="(candidate.nombre || '') + ' ' + (candidate.paterno || '') + ' ' + (candidate.materno || '')">{{ (candidate.nombre || '') + ' ' + (candidate.paterno || '') + ' ' + (candidate.materno || '') }}</h5>
+    </div>
+    <div class="col-xs-3 col-sm-4 col-md-4 col-lg-4">
+      <p class="text-right text-green text-11px text-bold">PROMEDIO</p>
+      <div class="flex flex-center end-xs">
+        <h5 class="text-right">{{ candidate.average }}</h5>
+      </div>
+    </div>
+    <div class="col-xs-3 col-sm-4 col-md-4 col-lg-4">
+      <div class="btn-group right">
+        <a class="btn btn-xs btn-primary-outline"
+           (click)="onToggled()"
+           *ngIf="!toggle"><!--Visible por defecto. Al clic desaparece y aparece el siguiente boton -->
+          <i class="material-icons">arrow_downward</i>
+          <span class="hidden-xs">Ver detalles</span>
+        </a>
+        <a class="btn btn-xs btn-primary-outline"
+           (click)="onToggled()"
+           *ngIf="toggle"><!--Oculto por defecto-->
+          <i class="material-icons">arrow_upward</i>
+          <span class="hidden-xs">Ocultar detalles</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="detalle-resultados-entrevista"
+       [ngClass]="{
+        hide: !toggle,
+        show: toggle
+       }"><!-- Agregar clase .hide o .show dependiente el caso-->
+    <div class="row margin-bottom-20px">
+      <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+        <p class="text-bold text-11px text-uppercase text-truncate"># Entrevista</p>
+      </div>
+      <div class="col-xs-3 col-sm-4 col-md-4 col-lg-4">
+        <p class="text-bold text-11px text-uppercase text-right text-truncate">Calificación</p>
+      </div>
+      <div class="col-xs-3 col-sm-4 col-md-4 col-lg-4">
+        <p class="text-bold text-11px text-uppercase text-right text-truncate">Recomendación</p>
+      </div>
+    </div>
+    <div *ngFor="let item of candidate?.interviews">
+    <div class="row">
+      <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+        <p class="text-bold">{{ item.name }}</p>
+      </div>
+      <div class="col-xs-3 col-sm-4 col-md-4 col-lg-4">
+        <div class="flex flex-center end-xs">
+          <p class="text-bold text-right">{{ item.qualification }}</p>
+          <i class="material-icons margin-left-5px cursor-pointer text-20px"
+             title="Ver detalle"
+             (click)="onClickpopup(item?.data?.value)">visibility</i>
+        </div>
+      </div>
+      <div class="col-xs-3 col-sm-4 col-md-4 col-lg-4">
+        <div class="text-right">
+          <i class="material-icons text-green"
+             *ngIf="item.recommendIt" >thumb_up_alt</i>
+          <i class="material-icons text-rojo"
+             *ngIf="!item.recommendIt">thumb_down_alt</i>
+        </div>
+      </div>
+    </div>
+    <div class="divider margin-bottom-10px"></div>
+    </div>
+  </div>
+</div>

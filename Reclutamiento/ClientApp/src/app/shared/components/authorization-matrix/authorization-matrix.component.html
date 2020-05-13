@@ -1,0 +1,16 @@
+<div class="box">
+  <div class="box-body">
+    <ho1a-status
+        [enableButtonAction]="enableButtonAction"
+        [status]="matrix"
+        (change)="changeStatus($event)">
+    </ho1a-status>
+    <ho1a-modal-input
+        *ngIf="toogledModalInputComments"
+        [title]="titleModalInputCommentsConfirmation"
+        [required]="!(approvalSelected.stateValidation === 1)"
+        (cancel)="cancelCommentsConfirmation($event)"
+        (accept)="acceptCommentsConfirmation($event)">
+    </ho1a-modal-input>
+  </div>
+</div>

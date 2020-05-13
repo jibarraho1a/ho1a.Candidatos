@@ -1,0 +1,17 @@
+C:\Users\davilam\Documents\Development\ho1a.Reclutamiento\Dev\ho1a.Api.HttpClient\bin\Debug\netcoreapp3.0\ho1a.Api.HttpClient.deps.json
+C:\Users\davilam\Documents\Development\ho1a.Reclutamiento\Dev\ho1a.Api.HttpClient\bin\Debug\netcoreapp3.0\ho1a.Api.HttpClient.dll
+C:\Users\davilam\Documents\Development\ho1a.Reclutamiento\Dev\ho1a.Api.HttpClient\bin\Debug\netcoreapp3.0\ho1a.Api.HttpClient.pdb
+C:\Users\davilam\Documents\Development\ho1a.Reclutamiento\Dev\ho1a.Api.HttpClient\obj\Debug\netcoreapp3.0\ho1a.Api.HttpClient.csprojAssemblyReference.cache
+C:\Users\davilam\Documents\Development\ho1a.Reclutamiento\Dev\ho1a.Api.HttpClient\obj\Debug\netcoreapp3.0\ho1a.Api.HttpClient.AssemblyInfoInputs.cache
+C:\Users\davilam\Documents\Development\ho1a.Reclutamiento\Dev\ho1a.Api.HttpClient\obj\Debug\netcoreapp3.0\ho1a.Api.HttpClient.AssemblyInfo.cs
+C:\Users\davilam\Documents\Development\ho1a.Reclutamiento\Dev\ho1a.Api.HttpClient\obj\Debug\netcoreapp3.0\ho1a.Api.HttpClient.dll
+C:\Users\davilam\Documents\Development\ho1a.Reclutamiento\Dev\ho1a.Api.HttpClient\obj\Debug\netcoreapp3.0\ho1a.Api.HttpClient.pdb
+C:\Users\jibarrao\source\repos\Dev\ho1a.Api.HttpClient\bin\Debug\netcoreapp3.0\ho1a.Api.HttpClient.deps.json
+C:\Users\jibarrao\source\repos\Dev\ho1a.Api.HttpClient\bin\Debug\netcoreapp3.0\ho1a.Api.HttpClient.dll
+C:\Users\jibarrao\source\repos\Dev\ho1a.Api.HttpClient\bin\Debug\netcoreapp3.0\ho1a.Api.HttpClient.pdb
+C:\Users\jibarrao\source\repos\Dev\ho1a.Api.HttpClient\obj\Debug\netcoreapp3.0\ho1a.Api.HttpClient.csprojAssemblyReference.cache
+C:\Users\jibarrao\source\repos\Dev\ho1a.Api.HttpClient\obj\Debug\netcoreapp3.0\ho1a.Api.HttpClient.csproj.CoreCompileInputs.cache
+C:\Users\jibarrao\source\repos\Dev\ho1a.Api.HttpClient\obj\Debug\netcoreapp3.0\ho1a.Api.HttpClient.AssemblyInfoInputs.cache
+C:\Users\jibarrao\source\repos\Dev\ho1a.Api.HttpClient\obj\Debug\netcoreapp3.0\ho1a.Api.HttpClient.AssemblyInfo.cs
+C:\Users\jibarrao\source\repos\Dev\ho1a.Api.HttpClient\obj\Debug\netcoreapp3.0\ho1a.Api.HttpClient.dll
+C:\Users\jibarrao\source\repos\Dev\ho1a.Api.HttpClient\obj\Debug\netcoreapp3.0\ho1a.Api.HttpClient.pdb

@@ -1,0 +1,11 @@
+<div class="filter-group">
+    <div class="filter-title-group">{{ columnDef.title }}</div>
+    <div class="filter-row"
+         *ngFor="let item of items">
+      <div class="filter-check-name"><!--se agrega la clase active-->
+        <div class="filter-check"><input type="checkbox" checked></div>
+        <div class="filter-name">{{ item }}</div>
+      </div>
+      <!--<div class="filter-quantity"><span>12,000</span></div>-->
+    </div>
+</div>

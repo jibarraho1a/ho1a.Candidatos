@@ -1,0 +1,62 @@
+<div class="btn-cerrar" (click)="togglesm()">
+  <i class="material-icons">close</i>
+</div>
+<div class="aside-logo">
+  <div class="wrap-logo">
+    <img src="assets/img/logo_aside.svg">
+  </div>
+</div>
+<div class="aside-user-photo">
+  <div class="wrap-user-photo">
+    <div class="user-photo">
+      <div class="status bg-green"></div>
+      <div class="photo">
+        <img [src]="user?.foto ? user?.foto : 'assets/img/user_photo.png'">
+      </div>
+    </div>
+    <div class="user-info">
+      <h6 class="text-bold text-14px margin-0px text-truncate">{{ user?.nombre + " " + user?.apellidos }}</h6>
+      <p class="text-12px margin-0px text-truncate text-gray">{{ user.puesto }}</p>
+    </div>
+  </div>
+  <div class="recruiter-metrics">
+    <ul class="text-gray">
+      <li>
+        <i class="material-icons">track_changes</i> Commit <span> 15/20 </span>
+      </li>
+      <li>
+        <i class="material-icons">check_circle</i> Cerradas <span> 10/30 </span>
+      </li>
+      <li>
+        <i class="material-icons">grade</i> Ranking <span> 1/10 </span>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="padding-left-20px padding-right-20px">
+  <div class="divider opacity-60"></div>
+</div>
+<div class="aside-nav">
+  <div *ngFor="let item of menu">
+    <div *ngIf="canViewSection(item)">
+      <p class="menu">{{ item.name }}</p>
+      <ul>
+        <a *ngFor="let item of item.routes" [routerLink]="item.route" routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact:true }" (click)="onClickMenu(item)" class="text-gray">
+          <li class="text-truncate">
+            <i class="material-icons">{{ item.icon }}</i>{{ item.name }}
+          </li>
+        </a>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="aside-nav logout">
+  <ul>
+    <a (click)="logoutUser()" href="" class="text-gray">
+      <li class="text-truncate">
+        <i class="material-icons">power_settings_new</i>Cerrar sesión
+      </li>
+    </a>
+  </ul>
+</div>

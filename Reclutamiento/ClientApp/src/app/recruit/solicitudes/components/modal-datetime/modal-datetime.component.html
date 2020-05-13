@@ -1,0 +1,65 @@
+<form [formGroup]="form">
+  <ho1a-modal-form
+    [tittle]="'Selección de fecha'"
+    [form]="form"
+    [buttoms]="butttom"
+    [width]="'280px'"
+    (cancel)="onCancel()"
+    (clickButtom)="onClickButtom($event)">
+    <div modal-body>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="row">
+            <mat-form-field class="col-xs-12 col-sm-12 col-md-6 col-lg-6 margin-bottom-30px">
+                <input
+                      matInput
+                      [min]="fechaMinima"
+                      [readonly]="true"
+                      [matDatepicker]="pickerfecha"
+                      placeholder="Fecha"
+                      formControlName="fecha" >
+                <mat-datepicker-toggle matSuffix [for]="pickerfecha"></mat-datepicker-toggle>
+                <mat-datepicker #pickerfecha></mat-datepicker>
+                <mat-hint>
+                  <span [innerHTML]="'Requerido'"></span>
+                </mat-hint>
+                <mat-error>
+                  <span [innerHTML]="'Requerido'"></span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="col-xs-12 col-sm-12 col-md-3 col-lg-3 margin-bottom-30px">
+              <input
+                matInput
+                type="number"
+                min="0"
+                max="24"
+                placeholder="Hora"
+                formControlName="hora">
+              <mat-hint>
+                <span [innerHTML]="'Requerido'"></span>
+              </mat-hint>
+              <mat-error>
+                <span [innerHTML]="'Requerido'"></span>
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="col-xs-12 col-sm-12 col-md-3 col-lg-3 margin-bottom-30px">
+              <input
+                matInput
+                type="number"
+                min="0"
+                max="60"
+                placeholder="Minuto"
+                formControlName="minuto">
+              <mat-hint>
+                <span [innerHTML]="'Requerido'"></span>
+              </mat-hint>
+              <mat-error>
+                <span [innerHTML]="'Requerido'"></span>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ho1a-modal-form>
+</form>

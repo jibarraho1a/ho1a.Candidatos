@@ -1,0 +1,17 @@
+C:\Users\davilam\Documents\Development\ho1a.Reclutamiento\Dev\ho1a.reclutamiento.enums\bin\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.deps.json
+C:\Users\davilam\Documents\Development\ho1a.Reclutamiento\Dev\ho1a.reclutamiento.enums\bin\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.dll
+C:\Users\davilam\Documents\Development\ho1a.Reclutamiento\Dev\ho1a.reclutamiento.enums\bin\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.pdb
+C:\Users\davilam\Documents\Development\ho1a.Reclutamiento\Dev\ho1a.reclutamiento.enums\obj\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.csprojAssemblyReference.cache
+C:\Users\davilam\Documents\Development\ho1a.Reclutamiento\Dev\ho1a.reclutamiento.enums\obj\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.AssemblyInfoInputs.cache
+C:\Users\davilam\Documents\Development\ho1a.Reclutamiento\Dev\ho1a.reclutamiento.enums\obj\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.AssemblyInfo.cs
+C:\Users\davilam\Documents\Development\ho1a.Reclutamiento\Dev\ho1a.reclutamiento.enums\obj\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.dll
+C:\Users\davilam\Documents\Development\ho1a.Reclutamiento\Dev\ho1a.reclutamiento.enums\obj\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.pdb
+C:\Users\jibarrao\source\repos\Dev\ho1a.reclutamiento.enums\bin\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.deps.json
+C:\Users\jibarrao\source\repos\Dev\ho1a.reclutamiento.enums\bin\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.dll
+C:\Users\jibarrao\source\repos\Dev\ho1a.reclutamiento.enums\bin\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.pdb
+C:\Users\jibarrao\source\repos\Dev\ho1a.reclutamiento.enums\obj\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.csprojAssemblyReference.cache
+C:\Users\jibarrao\source\repos\Dev\ho1a.reclutamiento.enums\obj\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.csproj.CoreCompileInputs.cache
+C:\Users\jibarrao\source\repos\Dev\ho1a.reclutamiento.enums\obj\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.AssemblyInfoInputs.cache
+C:\Users\jibarrao\source\repos\Dev\ho1a.reclutamiento.enums\obj\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.AssemblyInfo.cs
+C:\Users\jibarrao\source\repos\Dev\ho1a.reclutamiento.enums\obj\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.dll
+C:\Users\jibarrao\source\repos\Dev\ho1a.reclutamiento.enums\obj\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.pdb
