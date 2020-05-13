@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gfCvxheZBF2nD+PesRP4b2WTEljEVI2fD3w0T42Xq1NEU2sBvdnlulRvdbfYV3I5jGJRhXTwZvSyQqpdpOHXKw==",
+  "dgSpecHash": "hDTLYF7Sa1TUM3ROpspbQpW8KUaT/gH/rwc47lIQMRTh20FKIXvZBoQrWKQU6lzj73nnCpdRL0SoLk4pjKk/FQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.reclutamiento.enums\\ho1a.reclutamiento.enums.csproj",
+  "projectFilePath": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.reclutamiento.enums\\ho1a.reclutamiento.enums.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jibarrao\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
     "C:\\Users\\jibarrao\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",

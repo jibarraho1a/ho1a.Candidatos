@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6fcwJWN6+43jvrZkKClmUSSta1DMI7ydIiAdKGrTcAFcY1tRE/XvQ2NXyWE29RrG5ykgsGB4rN3+uE6hKxQjQA==",
+  "dgSpecHash": "WSMoepcOFGTafvSyYxtnSIBG5syBVu14doYZHKVv+6tVu2NK/MkEQiMIem87/CLef7ZLTyZ+xbLaUaO4vsX7+g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.reclutamiento.models\\ho1a.reclutamiento.models.csproj",
+  "projectFilePath": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.reclutamiento.models\\ho1a.reclutamiento.models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jibarrao\\.nuget\\packages\\epplus\\5.1.0\\epplus.5.1.0.nupkg.sha512",
     "C:\\Users\\jibarrao\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.3\\microsoft.aspnetcore.cryptography.internal.3.1.3.nupkg.sha512",

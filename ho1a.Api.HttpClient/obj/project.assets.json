@@ -58,11 +58,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.Api.HttpClient\\ho1a.Api.HttpClient.csproj",
+      "projectUniqueName": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.Api.HttpClient\\ho1a.Api.HttpClient.csproj",
       "projectName": "ho1a.Api.HttpClient",
-      "projectPath": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.Api.HttpClient\\ho1a.Api.HttpClient.csproj",
+      "projectPath": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.Api.HttpClient\\ho1a.Api.HttpClient.csproj",
       "packagesPath": "C:\\Users\\jibarrao\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.Api.HttpClient\\obj\\",
+      "outputPath": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.Api.HttpClient\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -21,3 +21,15 @@ C:\Users\jibarrao\source\repos\Dev\ho1a.Reclutamiento.BLL\obj\Debug\netcoreapp3.
 C:\Users\jibarrao\source\repos\Dev\ho1a.Reclutamiento.BLL\obj\Debug\netcoreapp3.1\ho1a.Reclutamiento.BLL.csproj.CopyComplete
 C:\Users\jibarrao\source\repos\Dev\ho1a.Reclutamiento.BLL\obj\Debug\netcoreapp3.1\ho1a.Reclutamiento.BLL.dll
 C:\Users\jibarrao\source\repos\Dev\ho1a.Reclutamiento.BLL\obj\Debug\netcoreapp3.1\ho1a.Reclutamiento.BLL.pdb
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.Reclutamiento.BLL\bin\Debug\netcoreapp3.1\ho1a.Reclutamiento.BLL.deps.json
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.Reclutamiento.BLL\bin\Debug\netcoreapp3.1\ho1a.Reclutamiento.BLL.dll
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.Reclutamiento.BLL\bin\Debug\netcoreapp3.1\ho1a.Reclutamiento.BLL.pdb
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.Reclutamiento.BLL\bin\Debug\netcoreapp3.1\ho1a.Reclutamiento.DAL.dll
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.Reclutamiento.BLL\bin\Debug\netcoreapp3.1\ho1a.Reclutamiento.DAL.pdb
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.Reclutamiento.BLL\obj\Debug\netcoreapp3.1\ho1a.Reclutamiento.BLL.csprojAssemblyReference.cache
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.Reclutamiento.BLL\obj\Debug\netcoreapp3.1\ho1a.Reclutamiento.BLL.csproj.CoreCompileInputs.cache
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.Reclutamiento.BLL\obj\Debug\netcoreapp3.1\ho1a.Reclutamiento.BLL.AssemblyInfoInputs.cache
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.Reclutamiento.BLL\obj\Debug\netcoreapp3.1\ho1a.Reclutamiento.BLL.AssemblyInfo.cs
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.Reclutamiento.BLL\obj\Debug\netcoreapp3.1\ho1a.Reclutamiento.BLL.csproj.CopyComplete
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.Reclutamiento.BLL\obj\Debug\netcoreapp3.1\ho1a.Reclutamiento.BLL.dll
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.Reclutamiento.BLL\obj\Debug\netcoreapp3.1\ho1a.Reclutamiento.BLL.pdb

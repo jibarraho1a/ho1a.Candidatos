@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.applicationCore\\ho1a.applicationCore.csproj": {}
+    "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.applicationCore\\ho1a.applicationCore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.Api.HttpClient\\ho1a.Api.HttpClient.csproj": {
+    "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.Api.HttpClient\\ho1a.Api.HttpClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.Api.HttpClient\\ho1a.Api.HttpClient.csproj",
+        "projectUniqueName": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.Api.HttpClient\\ho1a.Api.HttpClient.csproj",
         "projectName": "ho1a.Api.HttpClient",
-        "projectPath": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.Api.HttpClient\\ho1a.Api.HttpClient.csproj",
+        "projectPath": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.Api.HttpClient\\ho1a.Api.HttpClient.csproj",
         "packagesPath": "C:\\Users\\jibarrao\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.Api.HttpClient\\obj\\",
+        "outputPath": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.Api.HttpClient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -79,14 +79,14 @@
         }
       }
     },
-    "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.applicationCore\\ho1a.applicationCore.csproj": {
+    "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.applicationCore\\ho1a.applicationCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.applicationCore\\ho1a.applicationCore.csproj",
+        "projectUniqueName": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.applicationCore\\ho1a.applicationCore.csproj",
         "projectName": "ho1a.applicationCore",
-        "projectPath": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.applicationCore\\ho1a.applicationCore.csproj",
+        "projectPath": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.applicationCore\\ho1a.applicationCore.csproj",
         "packagesPath": "C:\\Users\\jibarrao\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.applicationCore\\obj\\",
+        "outputPath": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.applicationCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -105,11 +105,11 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.Api.HttpClient\\ho1a.Api.HttpClient.csproj": {
-                "projectPath": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.Api.HttpClient\\ho1a.Api.HttpClient.csproj"
+              "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.Api.HttpClient\\ho1a.Api.HttpClient.csproj": {
+                "projectPath": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.Api.HttpClient\\ho1a.Api.HttpClient.csproj"
               },
-              "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.reclutamiento.enums\\ho1a.reclutamiento.enums.csproj": {
-                "projectPath": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.reclutamiento.enums\\ho1a.reclutamiento.enums.csproj"
+              "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.reclutamiento.enums\\ho1a.reclutamiento.enums.csproj": {
+                "projectPath": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.reclutamiento.enums\\ho1a.reclutamiento.enums.csproj"
               }
             }
           }
@@ -171,14 +171,14 @@
         }
       }
     },
-    "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.reclutamiento.enums\\ho1a.reclutamiento.enums.csproj": {
+    "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.reclutamiento.enums\\ho1a.reclutamiento.enums.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.reclutamiento.enums\\ho1a.reclutamiento.enums.csproj",
+        "projectUniqueName": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.reclutamiento.enums\\ho1a.reclutamiento.enums.csproj",
         "projectName": "ho1a.reclutamiento.enums",
-        "projectPath": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.reclutamiento.enums\\ho1a.reclutamiento.enums.csproj",
+        "projectPath": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.reclutamiento.enums\\ho1a.reclutamiento.enums.csproj",
         "packagesPath": "C:\\Users\\jibarrao\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.reclutamiento.enums\\obj\\",
+        "outputPath": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.reclutamiento.enums\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

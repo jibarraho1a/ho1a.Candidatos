@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "krBseedwevpLs1omNc34Ix5F5onxZk2GVl9Q6YI9NMTENdTv2ZUC5HUv63g2mdi7LJDR1qKcYWMaVvHexkam3w==",
+  "dgSpecHash": "ry+RdFvSWyAyhuAVFfalwGmm799NBaRTep0teEbEo0K9Xk9JvWVioTv9TILTIMIlLqU5vOgI1S6KJMnKTQr13Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.applicationCore\\ho1a.applicationCore.csproj",
+  "projectFilePath": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.applicationCore\\ho1a.applicationCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jibarrao\\.nuget\\packages\\epplus\\5.1.0\\epplus.5.1.0.nupkg.sha512",
     "C:\\Users\\jibarrao\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",

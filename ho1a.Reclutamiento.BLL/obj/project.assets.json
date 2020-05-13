@@ -594,11 +594,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.Reclutamiento.BLL\\ho1a.Reclutamiento.BLL.csproj",
+      "projectUniqueName": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.Reclutamiento.BLL\\ho1a.Reclutamiento.BLL.csproj",
       "projectName": "ho1a.Reclutamiento.BLL",
-      "projectPath": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.Reclutamiento.BLL\\ho1a.Reclutamiento.BLL.csproj",
+      "projectPath": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.Reclutamiento.BLL\\ho1a.Reclutamiento.BLL.csproj",
       "packagesPath": "C:\\Users\\jibarrao\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.Reclutamiento.BLL\\obj\\",
+      "outputPath": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.Reclutamiento.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -617,8 +617,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.Reclutamiento.DAL\\ho1a.Reclutamiento.DAL.csproj": {
-              "projectPath": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.Reclutamiento.DAL\\ho1a.Reclutamiento.DAL.csproj"
+            "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.Reclutamiento.DAL\\ho1a.Reclutamiento.DAL.csproj": {
+              "projectPath": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.Reclutamiento.DAL\\ho1a.Reclutamiento.DAL.csproj"
             }
           }
         }

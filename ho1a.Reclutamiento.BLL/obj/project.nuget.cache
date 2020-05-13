@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JyisiR5FZKJVZhAdt5cQqRzGqVRHS9P2hJRsB+XypjQFWODN0zqqJDEO8r3xKxceFEOrtQtW48gCD/pimD0gpg==",
+  "dgSpecHash": "B7hsGyjozy9qFgQ87AazLtO6SBjClUR33F6FScwh8oJnrwukd78QeZVZkeatYp3OZfVBWRNufsabRj9MX1jtlg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.Reclutamiento.BLL\\ho1a.Reclutamiento.BLL.csproj",
+  "projectFilePath": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.Reclutamiento.BLL\\ho1a.Reclutamiento.BLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jibarrao\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
     "C:\\Users\\jibarrao\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.3\\microsoft.extensions.dependencyinjection.abstractions.3.1.3.nupkg.sha512",

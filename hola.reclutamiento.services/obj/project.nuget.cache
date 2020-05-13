@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "blIujXN8qfJWWW8CCCuHv8dgkNXnRtMCuIh0a2Uaq+YSF5MW2BF+8Juui9mGpdbKn4fuUr6JgkZrmRPnLMog6w==",
+  "dgSpecHash": "RoNg6/as2gWCg59Q41muZwoku1TUJVaeMI/fhGyBctSY6m6jBo2ZOcy5h1U4YC+vowgn+6xwFBc9QpapGnn5DA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jibarrao\\source\\repos\\Dev\\hola.reclutamiento.services\\ho1a.reclutamiento.services.csproj",
+  "projectFilePath": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\hola.reclutamiento.services\\ho1a.reclutamiento.services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jibarrao\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\jibarrao\\.nuget\\packages\\epplus\\5.1.0\\epplus.5.1.0.nupkg.sha512",

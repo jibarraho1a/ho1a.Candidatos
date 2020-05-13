@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "z1Gt8St4yCatTjAbd8YQH/1YlgkT1Y4wx/FR7J1EipUCobTUcO9sl3Jq8a4tsW3GwrlY/s60F/3wHj/VoIGXTw==",
+  "dgSpecHash": "SJ8VJa35A84B+WfRU2Mcgg/72yhkoYo/N37v+xNl3Eqt3QAwXRK98JB1k+1MivCwo+jVGEUWr8CB/dlFSCsxiA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.Api.HttpClient\\ho1a.Api.HttpClient.csproj",
+  "projectFilePath": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.Api.HttpClient\\ho1a.Api.HttpClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jibarrao\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\jibarrao\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",

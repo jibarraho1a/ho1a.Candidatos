@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.reclutamiento.enums\\ho1a.reclutamiento.enums.csproj",
+      "projectUniqueName": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.reclutamiento.enums\\ho1a.reclutamiento.enums.csproj",
       "projectName": "ho1a.reclutamiento.enums",
-      "projectPath": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.reclutamiento.enums\\ho1a.reclutamiento.enums.csproj",
+      "projectPath": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.reclutamiento.enums\\ho1a.reclutamiento.enums.csproj",
       "packagesPath": "C:\\Users\\jibarrao\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.reclutamiento.enums\\obj\\",
+      "outputPath": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.reclutamiento.enums\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

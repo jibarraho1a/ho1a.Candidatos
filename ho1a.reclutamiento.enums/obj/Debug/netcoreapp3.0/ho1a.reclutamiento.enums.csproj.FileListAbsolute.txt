@@ -15,3 +15,12 @@ C:\Users\jibarrao\source\repos\Dev\ho1a.reclutamiento.enums\obj\Debug\netcoreapp
 C:\Users\jibarrao\source\repos\Dev\ho1a.reclutamiento.enums\obj\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.AssemblyInfo.cs
 C:\Users\jibarrao\source\repos\Dev\ho1a.reclutamiento.enums\obj\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.dll
 C:\Users\jibarrao\source\repos\Dev\ho1a.reclutamiento.enums\obj\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.pdb
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.reclutamiento.enums\bin\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.deps.json
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.reclutamiento.enums\bin\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.dll
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.reclutamiento.enums\bin\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.pdb
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.reclutamiento.enums\obj\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.csprojAssemblyReference.cache
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.reclutamiento.enums\obj\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.csproj.CoreCompileInputs.cache
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.reclutamiento.enums\obj\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.AssemblyInfoInputs.cache
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.reclutamiento.enums\obj\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.AssemblyInfo.cs
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.reclutamiento.enums\obj\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.dll
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.reclutamiento.enums\obj\Debug\netcoreapp3.0\ho1a.reclutamiento.enums.pdb

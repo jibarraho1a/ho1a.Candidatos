@@ -15,3 +15,12 @@ C:\Users\jibarrao\source\repos\Dev\ho1a.Api.HttpClient\obj\Debug\netcoreapp3.0\h
 C:\Users\jibarrao\source\repos\Dev\ho1a.Api.HttpClient\obj\Debug\netcoreapp3.0\ho1a.Api.HttpClient.AssemblyInfo.cs
 C:\Users\jibarrao\source\repos\Dev\ho1a.Api.HttpClient\obj\Debug\netcoreapp3.0\ho1a.Api.HttpClient.dll
 C:\Users\jibarrao\source\repos\Dev\ho1a.Api.HttpClient\obj\Debug\netcoreapp3.0\ho1a.Api.HttpClient.pdb
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.Api.HttpClient\bin\Debug\netcoreapp3.0\ho1a.Api.HttpClient.deps.json
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.Api.HttpClient\bin\Debug\netcoreapp3.0\ho1a.Api.HttpClient.dll
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.Api.HttpClient\bin\Debug\netcoreapp3.0\ho1a.Api.HttpClient.pdb
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.Api.HttpClient\obj\Debug\netcoreapp3.0\ho1a.Api.HttpClient.csprojAssemblyReference.cache
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.Api.HttpClient\obj\Debug\netcoreapp3.0\ho1a.Api.HttpClient.csproj.CoreCompileInputs.cache
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.Api.HttpClient\obj\Debug\netcoreapp3.0\ho1a.Api.HttpClient.AssemblyInfoInputs.cache
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.Api.HttpClient\obj\Debug\netcoreapp3.0\ho1a.Api.HttpClient.AssemblyInfo.cs
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.Api.HttpClient\obj\Debug\netcoreapp3.0\ho1a.Api.HttpClient.dll
+C:\Users\jibarrao\Documents\GitHub\ho1a.Candidatos\ho1a.Api.HttpClient\obj\Debug\netcoreapp3.0\ho1a.Api.HttpClient.pdb

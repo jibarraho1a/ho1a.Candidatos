@@ -9210,11 +9210,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jibarrao\\source\\repos\\Dev\\hola.reclutamiento.services\\ho1a.reclutamiento.services.csproj",
+      "projectUniqueName": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\hola.reclutamiento.services\\ho1a.reclutamiento.services.csproj",
       "projectName": "ho1a.reclutamiento.services",
-      "projectPath": "C:\\Users\\jibarrao\\source\\repos\\Dev\\hola.reclutamiento.services\\ho1a.reclutamiento.services.csproj",
+      "projectPath": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\hola.reclutamiento.services\\ho1a.reclutamiento.services.csproj",
       "packagesPath": "C:\\Users\\jibarrao\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jibarrao\\source\\repos\\Dev\\hola.reclutamiento.services\\obj\\",
+      "outputPath": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\hola.reclutamiento.services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -9233,11 +9233,11 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.applicationCore\\ho1a.applicationCore.csproj": {
-              "projectPath": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.applicationCore\\ho1a.applicationCore.csproj"
+            "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.applicationCore\\ho1a.applicationCore.csproj": {
+              "projectPath": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.applicationCore\\ho1a.applicationCore.csproj"
             },
-            "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.reclutamiento.models\\ho1a.reclutamiento.models.csproj": {
-              "projectPath": "C:\\Users\\jibarrao\\source\\repos\\Dev\\ho1a.reclutamiento.models\\ho1a.reclutamiento.models.csproj"
+            "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.reclutamiento.models\\ho1a.reclutamiento.models.csproj": {
+              "projectPath": "C:\\Users\\jibarrao\\Documents\\GitHub\\ho1a.Candidatos\\ho1a.reclutamiento.models\\ho1a.reclutamiento.models.csproj"
             }
           }
         }
