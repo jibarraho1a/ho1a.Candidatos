@@ -1,0 +1,18 @@
+<div class="alert"
+     *ngIf="data?.type == 1 || data?.type == 2 || data?.type == 3"
+     [ngClass]="{
+      'success': data?.type == 1,
+      'warning': data?.type == 2,
+      'danger':  data?.type == 3
+     }">
+  <i class="material-icons btn-close"
+     (click)="onClose()">close
+  </i>
+  <div class="flex">
+    <i class="material-icons margin-right-10px">error</i>
+    <div>
+      <h6 class="text-bold">{{ data?.title }}</h6>
+      <p class="text-12px">{{ data?.description }}</p>
+    </div>
+  </div>
+</div>

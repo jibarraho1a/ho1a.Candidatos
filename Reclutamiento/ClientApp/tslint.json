@@ -65,7 +65,7 @@
     ],
     "no-misused-new": true,
     "no-non-null-assertion": true,
-    "no-shadowed-variable": true,
+    "no-shadowed-variable": false,
     "no-string-literal": false,
     "no-string-throw": true,
     "no-switch-case-fall-through": true,
@@ -116,13 +116,25 @@
       "check-separator",
       "check-type"
     ],
+    "directive-selector": [
+      true,
+      "attribute",
+      "ho1a",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "ho1a",
+      "kebab-case"
+    ],
     "no-output-on-prefix": true,
-    "no-inputs-metadata-property": true,
-    "no-outputs-metadata-property": true,
-    "no-host-metadata-property": true,
+    "use-input-property-decorator": true,
+    "use-output-property-decorator": true,
+    "use-host-property-decorator": true,
     "no-input-rename": true,
     "no-output-rename": true,
-    "use-lifecycle-interface": true,
+    "use-life-cycle-interface": true,
     "use-pipe-transform-interface": true,
     "component-class-suffix": true,
     "directive-class-suffix": true

@@ -1,23 +1,44 @@
-import { NgModule, SkipSelf, Optional } from '@angular/core';
-import { EnsureModuleLoadedOnceGuard } from './ensure-module-loaded-once.guard';
-import { HttpClientModule } from '@angular/common/http';
-import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule } from '@angular/router';
-import { NotificationModule } from '@progress/kendo-angular-notification';
+import { ReactiveFormsModule } from '@angular/forms';
+
+// third-party modules
+import { MaterialModule } from '../material.module';
+
+// features modules
+import { AuthModule } from '../auth/auth.module';
+import { CandidateModule } from '../candidate/candidate.module';
+
+// containers
+import { ShellComponent } from './containers/shell/shell.component';
+
+// components
+import { AlertComponent } from './components/alert/alert.component';
+
+// routes
+export const ROUTES: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'auth' },
+/*{ path: '**', component: PageNotFoundComponent }*/
+];
 
 @NgModule({
   imports: [
-    HttpClientModule,
-    CommonModule,
-    RouterModule,
-    NotificationModule
+    BrowserModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    RouterModule.forRoot(ROUTES),
+    MaterialModule,
+    AuthModule,
+    CandidateModule,
   ],
-
+  declarations: [
+    ShellComponent,
+    AlertComponent
+  ],
+  exports: [
+    ShellComponent
+  ]
 })
-export class CoreModule extends EnsureModuleLoadedOnceGuard {
-  constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
-    super(parentModule);
-  }
-}
+export class CoreModule { }

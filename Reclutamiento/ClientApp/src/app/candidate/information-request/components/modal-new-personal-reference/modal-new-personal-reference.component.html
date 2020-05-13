@@ -1,0 +1,131 @@
+<form [formGroup]="form">
+  <ho1a-modal-form
+    [tittle]="'Referencias personales'"
+    [form]="form"
+    [buttoms]="butttom"
+    (cancel)="onCancel()"
+    (clickButtom)="onClickButtom($event)">
+    <div modal-body>
+      <div class="row margin-top-20px">
+        <mat-form-field class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-bottom-20px">
+          <input
+            matInput
+            placeholder="Nombre(s)"
+            formControlName="nombre">
+          <mat-hint>
+            <span
+              [ngClass]="{
+                'required': showAsRequired('nombre')
+              }"
+              [innerHTML]="'Requerido'"></span>
+          </mat-hint>
+          <mat-error>
+            <span [innerHTML]="'Requerido'"></span>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="col-xs-12 col-sm-6 col-md-6 col-lg-6 margin-bottom-20px">
+          <input
+            matInput
+            placeholder="Apellido paterno"
+            formControlName="paterno">
+          <mat-hint>
+            <span
+              [ngClass]="{
+                'required': showAsRequired('paterno')
+              }"
+              [innerHTML]="'Requerido'"></span>
+          </mat-hint>
+          <mat-error>
+            <span [innerHTML]="'Requerido'"></span>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="col-xs-12 col-sm-6 col-md-6 col-lg-6 margin-bottom-20px">
+          <input
+            matInput
+            placeholder="Apellido materno"
+            formControlName="materno">
+          <mat-hint>
+            <span
+              [ngClass]="{
+                'required': showAsRequired('materno')
+              }"
+              [innerHTML]="'Requerido'"></span>
+          </mat-hint>
+          <mat-error>
+            <span [innerHTML]="'Requerido'"></span>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="col-xs-12 col-sm-6 col-md-6 col-lg-6 margin-bottom-20px">
+          <input
+            matInput
+            placeholder="Correo"
+            formControlName="email">
+          <mat-hint>
+            <span
+              [ngClass]="{
+                'required': showAsRequired('email')
+              }"
+              [innerHTML]="'Requerido'"></span>
+          </mat-hint>
+          <mat-error>
+            <span [innerHTML]="'Requerido'"></span>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="col-xs-12 col-sm-6 col-md-6 col-lg-6 margin-bottom-20px">
+          <input
+            matInput
+            placeholder="Parentesco"
+            formControlName="parentesco">
+          <mat-hint>
+            <span
+              [ngClass]="{
+                'required': showAsRequired('parentesco')
+              }"
+              [innerHTML]="'Requerido'"></span>
+          </mat-hint>
+          <mat-error>
+            <span [innerHTML]="'Requerido'"></span>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="col-xs-12 col-sm-4 col-md-4 col-lg-4 margin-bottom-20px">
+          <input
+            matInput
+            (keypress)="numberOnly($event)"
+            type="tel"
+            placeholder="Teléfono"
+            formControlName="telefono">
+          <mat-hint>
+            <span
+              [ngClass]="{
+                'required': showAsRequired('telefono')
+              }"
+              [innerHTML]="'Requerido'"></span>
+          </mat-hint>
+          <mat-error>
+            <span [innerHTML]="'Requerido'"></span>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="col-xs-12 col-sm-4 col-md-4 col-lg-4 margin-bottom-20px">
+          <input
+            matInput
+            (keypress)="numberOnly($event)"
+            placeholder="Tiempo en conocerse"
+            formControlName="tiempoConocerse">
+          <mat-hint>
+            <span
+              [ngClass]="{
+                'required': showAsRequired('tiempoConocerse')
+              }"
+              [innerHTML]="'Requerido'"></span>
+          </mat-hint>
+          <mat-error>
+            <span [innerHTML]="'Requerido'"></span>
+          </mat-error>
+        </mat-form-field>
+        <mat-checkbox class="col-xs-12 col-sm-4 col-md-4 col-lg-4 margin-bottom-20px"
+                      formControlName="solicitarReferencia">¿Solicitar referencia?
+        </mat-checkbox>
+      </div>
+    </div>
+  </ho1a-modal-form>
+</form>

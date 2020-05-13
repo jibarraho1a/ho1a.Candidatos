@@ -1,0 +1,46 @@
+/*///////////////////// ALERT ///////////////////////*/
+.alert {
+  width: 340px;
+  min-width: 60px;
+  padding: 15px;
+  border-radius: 3px;
+  position: fixed;
+  color: #fff;
+  top: 80px;
+  right: 10px;
+  z-index: 999;
+  animation-name: show_alert;
+  animation-duration: 1s;
+}
+
+@keyframes show_alert {
+  0% {top: 100px; opacity: 0;}
+  100% {top: 80px; opacity: 1;}
+}
+
+.alert .btn-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  opacity: .7;
+  transition: all .3s;
+}
+
+.alert .btn-close:hover {
+  opacity: 1;
+}
+
+.alert.danger {
+  background: #f44336;
+}
+
+.alert.warning {
+  background: #ea8518;
+}
+
+.alert.success {
+  background: #32af14;
+}

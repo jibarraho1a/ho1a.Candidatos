@@ -1,0 +1,6 @@
+{
+  "clientId": "78rkld9apdut56",
+  "urlApplication": "https://localhost:44389/miRHCandidato",
+  "apiRequisicionRH": "https://localhost:44389/api",
+  "apiIdentity": "https://localhost:44389/miRHCandidato/api/Identity"
+}

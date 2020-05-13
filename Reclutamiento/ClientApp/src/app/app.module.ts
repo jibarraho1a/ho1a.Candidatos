@@ -1,44 +1,60 @@
-import { NgModule } from '@angular/core';
-import { ContainerModule } from './core/container/container.module';
-import { ContainerComponent } from './core/container/container.component';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
+
+import { Store } from '../app/store';
+
+// core module
+import { CoreModule } from './core/core.module';
+
+// component
+import { ShellComponent } from './core/containers/shell/shell.component';
+import { EnvironmentService } from './core/service/environment-specific.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgxsModule } from '@ngxs/store';
-import { environment } from 'src/environments/environment';
-import { LoaderState } from './store/state/loader.state';
-import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
-import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
-import { RouterModule } from '@angular/router';
-import { appRoutes } from './app-routing.module';
-import { NotificacionState } from './store/state/notificaciones.state';
-import { MaterialModule } from './material.module';
-import { JwtModule } from '@auth0/angular-jwt';
-import { Store } from './shared/class/Store';
+import { SocialLoginModule, AuthServiceConfig } from 'angularx-social-login';
+import { GoogleLoginProvider, FacebookLoginProvider, LinkedInLoginProvider } from "angularx-social-login";
 
 
-export function tokenGetter() {
-  return localStorage.getItem('token');
+
+const config = new AuthServiceConfig([
+  {
+    id: FacebookLoginProvider.PROVIDER_ID,
+    provider: new FacebookLoginProvider('879364479141277')
+  },
+  {
+    id: GoogleLoginProvider.PROVIDER_ID,
+    provider: new GoogleLoginProvider("363525629096-mrb3l1eqovuj8oo30juok0fejlijrm3o.apps.googleusercontent.com")
+  }, 
+  {
+    id: LinkedInLoginProvider.PROVIDER_ID,
+    provider: new LinkedInLoginProvider("78rkld9apdut56")
+  }
+]);
+
+export function provideConfig() {
+  return config;
 }
 
 @NgModule({
   imports: [
-    ContainerModule,
-    RouterModule.forRoot(appRoutes),
-    NgxsModule.forRoot([
-      LoaderState,
-      NotificacionState,
-    ], { developmentMode: !environment.production }),
-    NgxsLoggerPluginModule.forRoot(),
-    NgxsReduxDevtoolsPluginModule.forRoot(),
-    MaterialModule,
-    JwtModule.forRoot({
-      config: {
-        tokenGetter: tokenGetter,
-        whitelistedDomains: ['https://localhost:4200/'],
-        blacklistedRoutes: [],
-      }
-    }),
+    CoreModule,
+    BrowserAnimationsModule,
+    SocialLoginModule
   ],
-  providers: [Store],
-  bootstrap: [ContainerComponent]
+  providers: [
+    {
+      provide: AuthServiceConfig,
+      useFactory: provideConfig
+    },
+    Store,
+    EnvironmentService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: (svc: EnvironmentService) => () => svc.loadAppConfig(),
+      multi: true,
+      deps: [EnvironmentService]
+    },
+  ],
+  bootstrap: [
+    ShellComponent
+  ]
 })
 export class AppModule { }

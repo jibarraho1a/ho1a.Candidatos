@@ -1,0 +1,15 @@
+<div class="wrap-estatus">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2"
+         *ngFor="let item of data"
+         (click)="onClick(item)">
+      <div class="estatus"
+           [ngClass]="{
+            'active': item.name === selectedbox
+            }">
+        <h1 class="text-indigo">{{ item.value }}</h1>
+        <p>{{ item.name }}</p>
+      </div>
+    </div>
+  </div>
+</div>

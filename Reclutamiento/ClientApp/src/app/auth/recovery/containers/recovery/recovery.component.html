@@ -1,0 +1,24 @@
+<ho1a-auth-form>
+  <div class="info-recovery" auth-body>
+    <h6 class="bold text-center margin-bottom-20px">Recuperar contraseña</h6>
+    <p class="text-center text-gray text-13px margin-bottom-20px">Escribe tu correo electrónico para recibir tu contraseña.</p>
+    <form [formGroup]="form">
+      <div class="input-login recovery">
+        <div class="icon">
+          <i class="material-icons">mail</i>
+        </div>
+        <input type="email"
+               (keydown)="onKeydown($event)"
+               placeholder="Correo electrónico"
+               formControlName="email">
+      </div>
+      <p class="text-center text-rojo text-13px">{{ error }}</p>
+      <a class="btn btn-primary margin-top-10px"
+         [attr.disabled]="disabled()"
+         (click)="onRecovery()">{{ textButtom }}</a>
+      <a routerLink="/auth/login">
+        <p class="text-gray text-13px text-center margin-top-20px cursor-pointer">Regresar para iniciar sesión</p>
+      </a>
+    </form>
+  </div>
+</ho1a-auth-form>

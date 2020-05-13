@@ -1,0 +1,794 @@
+<form [formGroup]="form">
+  <ho1a-template-landing
+    [informacionComplementaria]="databackground?.informacionComplementaria"
+    (logout)="onLogout()">
+    <div landing-completenameuser>{{ completenameuser }}</div>
+    <h1>{{ tittle }}</h1>
+    <div class="container">
+
+      <!--Datos personales-->
+      <div class="row margin-top-20px">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="box">
+            <div class="box-header">
+              <h4 class="text-center-xs">Datos personales</h4>
+            </div>
+            <div class="box-body margin-top-20px">
+              <div class="row">
+                <mat-form-field class="col-xs-12 col-sm-6 col-md-3 col-lg-3 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('nombre')?.configuration?.visible">
+                  <input
+                    matInput
+                    placeholder="Nombre"
+                    formControlName="nombre">
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('nombre')
+                      }"
+                      [innerHTML]="getHintByControl('nombre')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('nombre')"></span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field class="col-xs-12 col-sm-6 col-md-3 col-lg-3 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('paterno')?.configuration?.visible">
+                  <input
+                    matInput
+                    placeholder="Apellido paterno"
+                    formControlName="paterno">
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('paterno')
+                      }"
+                      [innerHTML]="getHintByControl('paterno')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('paterno')"></span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field class="col-xs-12 col-sm-6 col-md-3 col-lg-3 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('materno')?.configuration?.visible">
+                  <input
+                    matInput
+                    placeholder="Apellido materno"
+                    formControlName="materno">
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('materno')
+                      }"
+                      [innerHTML]="getHintByControl('materno')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('materno')"></span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field class="col-xs-12 col-sm-6 col-md-3 col-lg-3 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('email')?.configuration?.visible">
+                  <input
+                    matInput
+                    type="email"
+                    placeholder="Correo electrónico"
+                    formControlName="email">
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('email')
+                      }"
+                      [innerHTML]="getHintByControl('email')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('email')"></span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field class="col-xs-12 col-sm-12 col-md-6 col-lg-6 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('detalleDireccionCalle')?.configuration?.visible">
+                  <input
+                    matInput
+                    placeholder="Dirección"
+                    formControlName="detalleDireccionCalle">
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('detalleDireccionCalle')
+                      }"
+                      [innerHTML]="getHintByControl('detalleDireccionCalle')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('detalleDireccionCalle')"></span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field class="col-xs-12 col-sm-6 col-md-3 col-lg-3 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('detalleDireccionColonia')?.configuration?.visible">
+                  <input
+                    matInput
+                    placeholder="Colonia"
+                    formControlName="detalleDireccionColonia">
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('detalleDireccionColonia')
+                      }"
+                      [innerHTML]="getHintByControl('detalleDireccionColonia')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('detalleDireccionColonia')"></span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field class="col-xs-12 col-sm-6 col-md-3 col-lg-3 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('detalleDireccionEstado')?.configuration?.visible">
+                  <input
+                    matInput
+                    placeholder="Estado"
+                    formControlName="detalleDireccionEstado">
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('detalleDireccionEstado')
+                      }"
+                      [innerHTML]="getHintByControl('detalleDireccionEstado')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('detalleDireccionEstado')"></span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field class="col-xs-12 col-sm-6 col-md-3 col-lg-3 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('detalleDireccionMunicipio')?.configuration?.visible">
+                  <input
+                    matInput
+                    placeholder="Municipio"
+                    formControlName="detalleDireccionMunicipio">
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('detalleDireccionMunicipio')
+                      }"
+                      [innerHTML]="getHintByControl('detalleDireccionMunicipio')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('detalleDireccionMunicipio')"></span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field class="col-xs-12 col-sm-6 col-md-3 col-lg-3 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('detalleDireccionCodigoPostal')?.configuration?.visible">
+                  <input
+                    matInput
+                    (keypress)="numberOnly($event)"
+                    type="number"
+                    placeholder="CP"
+                    formControlName="detalleDireccionCodigoPostal">
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('detalleDireccionCodigoPostal')
+                      }"
+                      [innerHTML]="getHintByControl('detalleDireccionCodigoPostal')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('detalleDireccionCodigoPostal')"></span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field class="col-xs-12 col-sm-6 col-md-3 col-lg-3 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('detalleFechaNacimiento')?.configuration?.visible">
+                  <input
+                    matInput
+                    [readonly]="true"
+                    [matDatepicker]="pickerfechanacimiento"
+                    placeholder="Fecha de nacimiento"
+                    formControlName="detalleFechaNacimiento" >
+                  <mat-datepicker-toggle matSuffix [for]="pickerfechanacimiento"></mat-datepicker-toggle>
+                  <mat-datepicker #pickerfechanacimiento></mat-datepicker>
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('detalleFechaNacimiento')
+                      }"
+                      [innerHTML]="getHintByControl('detalleFechaNacimiento')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('detalleFechaNacimiento')"></span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field class="col-xs-12 col-sm-6 col-md-3 col-lg-3 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('detalleTelefonoCasa')?.configuration?.visible">
+                  <input
+                    matInput
+                    (keypress)="numberOnly($event)"
+                    type="tel"
+                    placeholder="Teléfono fijo (con lada)"
+                    formControlName="detalleTelefonoCasa">
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('detalleTelefonoCasa')
+                      }"
+                      [innerHTML]="getHintByControl('detalleTelefonoCasa')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('detalleTelefonoCasa')"></span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field class="col-xs-12 col-sm-6 col-md-3 col-lg-3 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('detalleTelefonoCelular')?.configuration?.visible">
+                  <input
+                    matInput
+                    (keypress)="numberOnly($event)"
+                    type="tel"
+                    placeholder="Teléfono móvil"
+                    formControlName="detalleTelefonoCelular">
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('detalleTelefonoCelular')
+                      }"
+                      [innerHTML]="getHintByControl('detalleTelefonoCelular')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('detalleTelefonoCelular')"></span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field class="col-xs-12 col-sm-6 col-md-3 col-lg-3 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('detalleLinkedIn')?.configuration?.visible">
+                  <input
+                    matInput
+                    placeholder="LinkedIn"
+                    formControlName="detalleLinkedIn">
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('detalleLinkedIn')
+                      }"
+                      [innerHTML]="getHintByControl('detalleLinkedIn')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('detalleLinkedIn')"></span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-checkbox class="col-xs-12 col-sm-6 col-md-3 col-lg-3 margin-bottom-30px"
+                              *ngIf="getConfigurationByControl('detalleCertificacion')?.configuration?.visible"
+                  formControlName="detalleCertificacion">¿Cuenta con certificaciones?
+                </mat-checkbox>
+                <mat-form-field class="col-xs-12 col-sm-6 col-md-3 col-lg-3 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('detalleEstadoCivilId')?.configuration?.visible">
+                  <mat-select placeholder="Estado civil"
+                              formControlName="detalleEstadoCivilId">
+                    <mat-option *ngFor="let item of catalogs?.estadosCivil" [value]="item.value">
+                      {{ item.text }}
+                    </mat-option>
+                  </mat-select>
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('detalleEstadoCivilId')
+                      }"
+                      [innerHTML]="getHintByControl('detalleEstadoCivilId')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('detalleEstadoCivilId')"></span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field class="col-xs-12 col-sm-6 col-md-3 col-lg-3 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('detalleUltimoSalarioId')?.configuration?.visible">
+                  <mat-select placeholder="Último salario"
+                              formControlName="detalleUltimoSalarioId">
+                    <mat-option *ngFor="let item of catalogs?.ultimosSalarios" [value]="item.value">
+                      {{ item.text }}
+                    </mat-option>
+                  </mat-select>
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('detalleUltimoSalarioId')
+                      }"
+                      [innerHTML]="getHintByControl('detalleUltimoSalarioId')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('detalleUltimoSalarioId')"></span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field class="col-xs-12 col-sm-6 col-md-3 col-lg-3 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('detallePretencionEconomica')?.configuration?.visible">
+                  <input
+                    matInput
+                    min="0"
+                    currencyMask
+                    placeholder="Pretensión económica"
+                    formControlName="detallePretencionEconomica">
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('detallePretencionEconomica')
+                      }"
+                      [innerHTML]="getHintByControl('detallePretencionEconomica')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('detallePretencionEconomica')"></span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field class="col-xs-12 col-sm-6 col-md-3 col-lg-3 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('detalleLocalidadSucursalId')?.configuration?.visible">
+                  <mat-select placeholder="Localidad sucursal"
+                              formControlName="detalleLocalidadSucursalId">
+                    <mat-option *ngFor="let item of catalogs?.localidadesSucursa" [value]="item.value">
+                      {{ item.text }}
+                    </mat-option>
+                  </mat-select>
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('detalleLocalidadSucursalId')
+                      }"
+                      [innerHTML]="getHintByControl('detalleLocalidadSucursalId')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('detalleLocalidadSucursalId')"></span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field class="col-xs-12 col-sm-6 col-md-3 col-lg-3 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('detallePuestoSolicitadoId')?.configuration?.visible">
+                  <mat-select placeholder="Puesto solicitado"
+                              formControlName="detallePuestoSolicitadoId">
+                    <mat-option *ngFor="let item of catalogs?.puestoSolicitado" [value]="item.value">
+                      {{ item.text }}
+                    </mat-option>
+                  </mat-select>
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('detallePuestoSolicitadoId')
+                      }"
+                      [innerHTML]="getHintByControl('detallePuestoSolicitadoId')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('detallePuestoSolicitadoId')"></span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field class="col-xs-12 col-sm-6 col-md-3 col-lg-3 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('detalleCurp')?.configuration?.visible">
+                  <input
+                    matInput
+                    placeholder="CURP"
+                    formControlName="detalleCurp">
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('detalleCurp')
+                      }"
+                      [innerHTML]="getHintByControl('detalleCurp')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('detalleCurp')"></span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field class="col-xs-12 col-sm-6 col-md-3 col-lg-3 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('detalleNss')?.configuration?.visible">
+                  <input
+                    matInput
+                    (keypress)="numberOnly($event)"
+                    placeholder="NSS"
+                    formControlName="detalleNss">
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('detalleNss')
+                      }"
+                      [innerHTML]="getHintByControl('detalleNss')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('detalleNss')"></span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field class="col-xs-12 col-sm-6 col-md-3 col-lg-3 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('detalleRfc')?.configuration?.visible">
+                  <input
+                    matInput
+                    placeholder="RFC"
+                    formControlName="detalleRfc">
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('detalleRfc')
+                      }"
+                      [innerHTML]="getHintByControl('detalleRfc')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('detalleRfc')"></span>
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Otros datos-->
+      <div class="row"
+           *ngIf="otrosDatosVisibles">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="box">
+            <div class="box-header">
+              <h4 class="text-center-xs">Otros datos</h4>
+            </div>
+            <div class="box-body margin-top-20px">
+              <div class="row">
+                <mat-form-field class="col-xs-12 col-sm-6 col-md-4 col-lg-4 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('detalleReferenciaVacanteId')?.configuration?.visible">
+                  <mat-select placeholder="¿Dónde se enteró de la vacante?"
+                              formControlName="detalleReferenciaVacanteId">
+                    <mat-option *ngFor="let item of catalogs?.referenciasVacante" [value]="item.value">
+                      {{ item.text }}
+                    </mat-option>
+                  </mat-select>
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('detalleReferenciaVacanteId')
+                      }"
+                      [innerHTML]="getHintByControl('detalleReferenciaVacanteId')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('detalleReferenciaVacanteId')"></span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field class="col-xs-12 col-sm-6 col-md-4 col-lg-4 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('detalleOtraReferenciaVacante')?.configuration?.visible && detalleOtraReferenciaVacanteActive">
+                  <input
+                    matInput
+                    placeholder="¿En que otro lugar se enteró de la vacante?"
+                    formControlName="detalleOtraReferenciaVacante">
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('detalleOtraReferenciaVacante')
+                      }"
+                      [innerHTML]="getHintByControl('detalleOtraReferenciaVacante')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('detalleOtraReferenciaVacante')"></span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field class="col-xs-12 col-sm-6 col-md-4 col-lg-4 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('detalleRecomendadoPor')?.configuration?.visible && detalleRecomendadoPorActive">
+                  <input
+                    matInput
+                    placeholder="¿A quién conoce dentro de la empresa?"
+                    formControlName="detalleRecomendadoPor">
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('detalleRecomendadoPor')
+                      }"
+                      [innerHTML]="getHintByControl('detalleRecomendadoPor')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('detalleRecomendadoPor')"></span>
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Datos generales (último trabajo)-->
+      <div class="row"
+           *ngIf="datosGeneralesUltimoTrabajoVisibles">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="box">
+            <div class="box-header">
+              <h4 class="text-center-xs">Datos generales (último trabajo)</h4>
+            </div>
+            <div class="box-body margin-top-20px">
+              <div class="row">
+                <mat-form-field class="col-xs-12 col-sm-6 col-md-4 col-lg-4 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('detalleUltimoTrabajoEmpresa')?.configuration?.visible">
+                  <input
+                    matInput
+                    placeholder="Empresa"
+                    formControlName="detalleUltimoTrabajoEmpresa">
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('detalleUltimoTrabajoEmpresa')
+                      }"
+                      [innerHTML]="getHintByControl('detalleUltimoTrabajoEmpresa')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('detalleUltimoTrabajoEmpresa')"></span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field class="col-xs-12 col-sm-6 col-md-4 col-lg-4 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('detalleUltimoTrabajoPuesto')?.configuration?.visible">
+                  <input
+                    matInput
+                    placeholder="Puesto"
+                    formControlName="detalleUltimoTrabajoPuesto">
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('detalleUltimoTrabajoPuesto')
+                      }"
+                      [innerHTML]="getHintByControl('detalleUltimoTrabajoPuesto')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('detalleUltimoTrabajoPuesto')"></span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field class="col-xs-12 col-sm-6 col-md-4 col-lg-4 margin-bottom-30px"
+                                *ngIf="getConfigurationByControl('detalleUltimoTrabajoSueldoFijoMensual')?.configuration?.visible">
+                  <input
+                    matInput
+                    min="0"
+                    currencyMask
+                    placeholder="Sueldo fijo mensual"
+                    formControlName="detalleUltimoTrabajoSueldoFijoMensual">
+                  <mat-hint>
+                    <span
+                      [ngClass]="{
+                        'required': showAsRequired('detalleUltimoTrabajoSueldoFijoMensual')
+                      }"
+                      [innerHTML]="getHintByControl('detalleUltimoTrabajoSueldoFijoMensual')"></span>
+                  </mat-hint>
+                  <mat-error>
+                    <span [innerHTML]="getErrorByControl('detalleUltimoTrabajoSueldoFijoMensual')"></span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-checkbox class="col-xs-12 col-sm-6 col-md-6 col-lg-6 margin-bottom-30px"
+                              *ngIf="getConfigurationByControl('detalleUltimoTrabajoGastosMedicosMayores')?.configuration?.visible"
+                              formControlName="detalleUltimoTrabajoGastosMedicosMayores">¿Contó con gastos médicos mayores?
+                </mat-checkbox>
+                <mat-checkbox class="col-xs-12 col-sm-6 col-md-6 col-lg-6 margin-bottom-30px"
+                              *ngIf="getConfigurationByControl('detalleUltimoTrabajoSeguroVida')?.configuration?.visible"
+                              formControlName="detalleUltimoTrabajoSeguroVida">¿Contó con seguro de vida?
+                </mat-checkbox>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Prestaciones (último trabajo)-->
+      <div class="row"
+           *ngIf="getConfigurationByControl('detalleUltimoTrabajoPrestaciones')?.configuration?.visible">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="box">
+            <div class="box-header flex flex-between flex-wrap">
+              <h4 class="text-center-xs">Prestaciones (último trabajo)</h4>
+              <div class="btn-group">
+                <a class="btn btn-primary"
+                   (click)="onNewUltimoTrabajoPrestaciones()">
+                  <i class="material-icons">add</i>
+                  <span>Agregar nuevo</span>
+                </a>
+                <a class="btn btn-primary-outline"
+                   title="Mostrar contenido"
+                   *ngIf="!toggleUltimoTrabajoPrestaciones && hasUltimoTrabajoPrestaciones"
+                   (click)="onToggleUltimoTrabajoPrestaciones()"><!-- Al hacer clic, remueve la clase .hide -->
+                  <i class="material-icons">arrow_downward</i>
+                  <span class="hidden-xs">Mostrar</span>
+                </a>
+                <a class="btn btn-primary-outline"
+                   title="Ocultar contenido"
+                   *ngIf="toggleUltimoTrabajoPrestaciones && hasUltimoTrabajoPrestaciones"
+                   (click)="onToggleUltimoTrabajoPrestaciones()"><!-- Al hacer clic, agrega la clase .hide -->
+                  <i class="material-icons">arrow_upward</i>
+                  <span class="hidden-xs">Ocultar</span>
+                </a>
+              </div>
+            </div>
+            <div class="box-body margin-top-20px"
+                 *ngIf="toggleUltimoTrabajoPrestaciones">
+              <ho1a-list-item
+                *ngFor="let item of data?.detalleUltimoTrabajoPrestaciones"
+                (edith)="onEdithUltimoTrabajoPrestaciones($event)"
+                (delete)="onDeleteUltimoTrabajoPrestaciones($event)"
+                [options]="optionsUltimoTrabajoPrestaciones"
+                [row]="item">
+              </ho1a-list-item>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Ingresos (último trabajo)-->
+      <div class="row"
+           *ngIf="getConfigurationByControl('detalleUltimoTrabajoIngresos')?.configuration?.visible">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="box">
+            <div class="box-header flex flex-between flex-wrap">
+              <h4 class="text-center-xs">Ingresos (último trabajo)</h4>
+              <div class="btn-group">
+                <a class="btn btn-primary"
+                   (click)="onNewUltimoTrabajoIngresos()">
+                  <i class="material-icons">add</i>
+                  <span>Agregar nuevo</span>
+                </a>
+                <a class="btn btn-primary-outline"
+                   title="Mostrar contenido"
+                   *ngIf="!toggleUltimoTrabajoIngresos && hasUltimoTrabajoIngresos"
+                   (click)="onToggleUltimoTrabajoIngresos()"><!-- Al hacer clic, remueve la clase .hide -->
+                  <i class="material-icons">arrow_downward</i>
+                  <span class="hidden-xs">Mostrar</span>
+                </a>
+                <a class="btn btn-primary-outline"
+                   title="Ocultar contenido"
+                   *ngIf="toggleUltimoTrabajoIngresos && hasUltimoTrabajoIngresos"
+                   (click)="onToggleUltimoTrabajoIngresos()"><!-- Al hacer clic, remueve la clase .hide -->
+                  <i class="material-icons">arrow_upward</i>
+                  <span class="hidden-xs">Ocultar</span>
+                </a>
+              </div>
+            </div>
+            <div class="box-body margin-top-20px"
+                 *ngIf="toggleUltimoTrabajoIngresos">
+              <ho1a-list-item
+                *ngFor="let item of data?.detalleUltimoTrabajoIngresos"
+                (edith)="onEdithUltimoTrabajoIngresos($event)"
+                (delete)="onDeleteUltimoTrabajoIngresos($event)"
+                [options]="optionsUltimoTrabajoIngresos"
+                [row]="item">
+              </ho1a-list-item>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Referencias personales-->
+      <div class="row"
+           *ngIf="getConfigurationByControl('detalleReferenciasPersonales')?.configuration?.visible">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="box">
+            <div class="box-header flex flex-between flex-wrap">
+              <h4 class="text-center-xs">Referencias personales</h4>
+              <div class="btn-group">
+                <a class="btn btn-primary"
+                   (click)="onNewReferenciasPersonales()">
+                  <i class="material-icons">add</i>
+                  <span>Agregar nuevo</span>
+                </a>
+                <a class="btn btn-primary-outline"
+                   title="Mostrar contenido"
+                   *ngIf="!toggleReferenciasPersonales && hasReferenciasPersonales"
+                   (click)="onToggleReferenciasPersonales()"><!-- Al hacer clic, remueve la clase .hide -->
+                  <i class="material-icons">arrow_downward</i>
+                  <span class="hidden-xs">Mostrar</span>
+                </a>
+                <a class="btn btn-primary-outline"
+                   title="Ocultar contenido"
+                   *ngIf="toggleReferenciasPersonales && hasReferenciasPersonales"
+                   (click)="onToggleReferenciasPersonales()"><!-- Al hacer clic, remueve la clase .hide -->
+                  <i class="material-icons">arrow_upward</i>
+                  <span class="hidden-xs">Ocultar</span>
+                </a>
+              </div>
+            </div>
+            <div class="box-body margin-top-20px"
+                 *ngIf="toggleReferenciasPersonales">
+              <ho1a-list-item
+                *ngFor="let item of data?.detalleReferenciasPersonales"
+                (edith)="onEdithReferenciasPersonales($event)"
+                (delete)="onDeleteReferenciasPersonales($event)"
+                [options]="optionsReferenciasPersonales"
+                [row]="item">
+              </ho1a-list-item>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Referencias laborales-->
+      <div class="row"
+           *ngIf="getConfigurationByControl('detalleReferenciasLaborales')?.configuration?.visible">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="box">
+            <div class="box-header flex flex-between flex-wrap">
+              <h4 class="text-center-xs">Referencias laborales</h4>
+              <div class="btn-group">
+                <a class="btn btn-primary"
+                   (click)="onNewReferenciasLaborales()">
+                  <i class="material-icons">add</i>
+                  <span>Agregar nuevo</span>
+                </a>
+                <a class="btn btn-primary-outline"
+                   title="Mostrar contenido"
+                   *ngIf="!toggleReferenciasLaborales && hasReferenciasLaborales"
+                   (click)="onToggleReferenciasLaborales()"><!-- Al hacer clic, remueve la clase .hide -->
+                  <i class="material-icons">arrow_downward</i>
+                  <span class="hidden-xs">Mostrar</span>
+                </a>
+                <a class="btn btn-primary-outline"
+                   title="Ocultar contenido"
+                   *ngIf="toggleReferenciasLaborales && hasReferenciasLaborales"
+                   (click)="onToggleReferenciasLaborales()"><!-- Al hacer clic, remueve la clase .hide -->
+                  <i class="material-icons">arrow_upward</i>
+                  <span class="hidden-xs">Ocultar</span>
+                </a>
+              </div>
+            </div>
+            <div class="box-body margin-top-20px"
+                 *ngIf="toggleReferenciasLaborales">
+              <ho1a-list-item
+                *ngFor="let item of data?.detalleReferenciasLaborales"
+                (edith)="onEdithReferenciasLaborales($event)"
+                (delete)="onDeleteReferenciasLaborales($event)"
+                [options]="optionsReferenciasLaborales"
+                [row]="item">
+              </ho1a-list-item>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Documentos-->
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="box">
+            <div class="box-header">
+              <h4 class="text-center-xs">Documentos</h4>
+            </div>
+            <div class="box-body margin-top-20px">
+              <div class="row">
+                <ho1a-upload-files
+                  class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-bottom-30px"
+                  [withtemplate]="true"
+                  [documents]="databackground?.documents"
+                  (delete)="onDelete($event)"
+                  (upload)="onUpload($event)">
+                </ho1a-upload-files>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Botones-->
+      <div class="row margin-top-30px margin-bottom-30px">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="btn-group center">
+            <a class="btn btn-primary" (click)="onSave()">
+              <i class="material-icons">save</i>
+              <span>Guardar datos</span>
+            </a>
+            <a class="btn btn-primary-outline"
+               *ngIf="canSendNotify"
+               [attr.disabled]="disabled()"
+               (click)="onNotify()">
+              <i class="material-icons">send</i>
+              <span>Enviar datos</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </ho1a-template-landing>
+
+  <ho1a-modal-new-personal-reference
+    *ngIf="toggleModalNewReferenciasPersonales"
+    [data]="referenciaPersonal"
+    (cancel)="onCancelModalNewReferenciasPersonales()"
+    (clickButtomAction)="onAcceptModalNewReferenciasPersonales($event)">
+  </ho1a-modal-new-personal-reference>
+  <ho1a-modal-new-work-reference
+    *ngIf="toggleModalNewReferenciasLaborales"
+    [data]="referenciaLaboral"
+    (cancel)="onCancelModalNewReferenciasLaborales()"
+    (clickButtomAction)="onAcceptModalNewReferenciasLaborales($event)">
+  </ho1a-modal-new-work-reference>
+  <ho1a-modal-new-benefit
+    *ngIf="toggleModalNewUltimoTrabajoPrestaciones"
+    [data]="ultimoTrabajoPrestacion"
+    (cancel)="onCancelModalNewUltimoTrabajoPrestaciones()"
+    (clickButtomAction)="onAcceptModalNewUltimoTrabajoPrestaciones($event)">
+  </ho1a-modal-new-benefit>
+  <ho1a-modal-new-income
+    *ngIf="toggleModalNewUltimoTrabajoIngresos"
+    [data]="ultimoTrabajoIngreso"
+    (cancel)="onCancelModalNewUltimoTrabajoIngresos()"
+    (clickButtomAction)="onAcceptModalNewUltimoTrabajoIngresos($event)">
+  </ho1a-modal-new-income>
+
+</form>

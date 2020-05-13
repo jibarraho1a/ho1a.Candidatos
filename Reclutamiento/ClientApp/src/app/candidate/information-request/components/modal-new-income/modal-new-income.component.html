@@ -1,0 +1,47 @@
+<form [formGroup]="form">
+  <ho1a-modal-form
+    [tittle]="'Ingresos (último trabajo)'"
+    [form]="form"
+    [buttoms]="butttom"
+    (cancel)="onCancel()"
+    (clickButtom)="onClickButtom($event)">
+    <div modal-body>
+      <div class="row margin-top-20px">
+        <mat-form-field class="col-xs-12 col-sm-9 col-md-9 col-lg-9 margin-bottom-20px">
+          <input
+            matInput
+            placeholder="Tipo de ingreso"
+            formControlName="descripcion">
+          <mat-hint>
+            <span
+              [ngClass]="{
+                'required': showAsRequired('descripcion')
+              }"
+              [innerHTML]="'Requerido'"></span>
+          </mat-hint>
+          <mat-error>
+            <span [innerHTML]="'Requerido'"></span>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="col-xs-12 col-sm-3 col-md-3 col-lg-3 margin-bottom-20px">
+          <input
+            matInput
+            min="1"
+            currencyMask
+            placeholder="Monto"
+            formControlName="monto">
+          <mat-hint>
+            <span
+              [ngClass]="{
+                'required': showAsRequired('monto')
+              }"
+              [innerHTML]="'Requerido'"></span>
+          </mat-hint>
+          <mat-error>
+            <span [innerHTML]="'Requerido'"></span>
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+  </ho1a-modal-form>
+</form>

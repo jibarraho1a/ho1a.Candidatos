@@ -1,0 +1,10 @@
+<ho1a-form-information-request
+  *ngIf="exist && configuration && itemBackground"
+  [data]="item"
+  [configuration]="configuration?.componentes[0]"
+  [databackground]="itemBackground">
+</ho1a-form-information-request>
+<ho1a-loader
+  *ngIf="loadingStart || loadingChange"
+  [fullscreen]="true">
+</ho1a-loader>

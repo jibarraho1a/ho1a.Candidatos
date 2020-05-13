@@ -1,0 +1,65 @@
+<ho1a-auth-form>
+  <div class="info" auth-body>
+    <h6 class="bold text-center margin-bottom-20px">Iniciar sesión</h6>
+    <form [formGroup]="form">
+      <div class="input-login user">
+        <div class="icon">
+          <i class="material-icons">person</i>
+        </div>
+        <input placeholder="Correo electrónico"
+               formControlName="email">
+      </div>
+      <div class="input-login pass">
+        <div class="icon">
+          <i class="material-icons">lock</i>
+        </div>
+        <input type="password"
+               (keydown)="onKeydown($event)"
+               placeholder="Contraseña"
+               formControlName="password">
+      </div>
+      <a class="btn btn-primary iniciar margin-top-10px"
+         [attr.disabled]="disabled()"
+         (click)="loginUser()">
+        {{ textButtom }}
+      </a>
+    </form>
+    <br />
+    <p class="text-center text-rojo text-13px">{{ error }}</p>
+    <a routerLink="/auth/register">
+      <p class="text-gray text-13px text-center margin-top-20px cursor-pointer">Crear cuenta</p>
+    </a>
+    <a routerLink="/auth/recovery">
+      <p class="text-gray text-13px text-center margin-top-20px cursor-pointer">Recuperar contraseña</p>
+    </a>
+    <div class="note margin-top-20px">
+      <p class="text-gray text-13px">o inicia sesión con:</p>
+      <div class="line"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4 col-xs-4">
+        <a class="btn btn-facebook margin-top-10px" (click)="signInWithFB()">
+          <!-- <i class="fab fa-linkedin-in"></i> -->
+          <i class="fab fa-facebook-f"></i>
+          <!-- <span>Facebook</span> -->
+        </a>
+      </div>
+      <div class="col-sm-4 col-xs-4">
+        <a class="btn btn-linkedin margin-top-10px" [href]="urlLogin">        
+        <!-- <a class="btn btn-linkedin margin-top-10px" (click)="signInWithLinkedin()"> -->
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+      <div class="col-sm-4 col-xs-4">
+        <a class="btn btn-google margin-top-10px" (click)="signInWithGoogle()">
+          <i class="fab fa-google"></i>
+        </a>
+      </div>
+    </div>
+    <!--<a class="btn btn-linkedin margin-top-10px" [href]="urlLogin">
+      <i class="fab fa-linkedin"></i>
+      <span>LinkedIn</span>
+    </a>-->
+    <p class="copyright">Todos los derechos reservados. ho1a® 2018</p>
+  </div>
+</ho1a-auth-form>

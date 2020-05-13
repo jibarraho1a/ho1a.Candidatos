@@ -1,20 +1,31 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { LoginComponent } from './components/login/login.component';
+import { RouterModule, Routes } from '@angular/router';
+
+// third-party modules
+
+
+// shared-root modules
+import { SharedModule } from './shared/shared.module';
+
+export const ROUTES: Routes = [
+  {
+    path: 'auth',
+    children: [
+      { path: '', pathMatch: 'full', redirectTo: 'login' },
+      { path: 'login', loadChildren: './login/login.module#LoginModule' },
+      { path: 'register', loadChildren: './register/register.module#RegisterModule' },
+      { path: 'recovery', loadChildren: './recovery/recovery.module#RecoveryModule' },
+      { path: 'reset', loadChildren: './reset/reset.module#ResetModule' },
+    ]
+  }
+];
 
 @NgModule({
-  declarations: [
-      LoginComponent
-  ],
   imports: [
-      CommonModule,
-      FormsModule,
-      ReactiveFormsModule,
-  ],
-  exports: [
-      LoginComponent
+    CommonModule,
+    RouterModule.forChild(ROUTES),
+    SharedModule.forRoot()
   ]
 })
-export class AuthModule {
-}
+export class AuthModule {}
